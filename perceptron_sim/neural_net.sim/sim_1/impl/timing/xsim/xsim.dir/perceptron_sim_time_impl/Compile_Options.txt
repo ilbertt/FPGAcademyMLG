@@ -1,0 +1,1 @@
+-wto "c9250cb90ab34326824f2bada9e7301c" --incr --debug "typical" --relax --mt "8" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "perceptron_sim_time_impl" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.perceptron_sim" "xil_defaultlib.glbl" -log "elaborate.log" 

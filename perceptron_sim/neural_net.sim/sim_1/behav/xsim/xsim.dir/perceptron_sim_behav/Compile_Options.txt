@@ -1,0 +1,1 @@
+-wto "c9250cb90ab34326824f2bada9e7301c" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "perceptron_sim_behav" "xil_defaultlib.perceptron_sim" -log "elaborate.log" 

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../neural_net.srcs/sources_1/new/pack.vhd" \
+"../../../../../neural_net.srcs/sim_1/new/perceptron_sim.vhd" \
+
+# Do not sort compile order
+nosort

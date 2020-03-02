@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/gigo/Vivado/Projects/neural_net/neural_net.sim/sim_1/impl/timing/xsim/perceptron_sim_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perceptron
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/gigo/Vivado/Projects/neural_net/neural_net.srcs/sources_1/new/pack.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/gigo/Vivado/Projects/neural_net/neural_net.srcs/sim_1/new/perceptron_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'perceptron_sim'
