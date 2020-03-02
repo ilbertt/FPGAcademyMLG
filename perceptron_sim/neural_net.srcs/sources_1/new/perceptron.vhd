@@ -32,8 +32,8 @@ use work.lib_p.all;
 --use UNISIM.VComponents.all;
 
 entity perceptron is
-    Port ( input : in mem_in;
-           weight : in mem_w;
+    Port ( input : in mem_in_1d;
+           weight : in mem_w_1d;
            result : out std_logic);
 end perceptron;
 
@@ -42,9 +42,10 @@ begin
     process(weight, input)
     variable s: signed(IN_WIDTH + W_WIDTH -1+N downto 0);
     begin
-        s:=weight(0);
+        s:=(others=>'0');
+        s:=s+weight(0);
         loop1: for i in input'range loop
-            s:=s+weight(i-1)*input(i);
+            s:=s+weight(i+1)*input(i);
         end loop;
         if s>0 then
             result<='1';
