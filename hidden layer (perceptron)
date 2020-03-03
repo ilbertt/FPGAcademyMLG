@@ -1,0 +1,41 @@
+--one layer of three perceptrons
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use work.lib_p.all;
+
+entity perceptron_layer is
+    Port ( input : in mem_in_1d(IN_SIG-1 downto 0);
+           weight : in mem_w_2d(PERC_NUM-1 downto 0, W_NUM-1 downto 0);
+           activation : out mem_out_2d(PERC_NUM-1 downto 0, OUT_SIG-1 downto 0)
+    );
+end perceptron_layer;
+
+architecture Behavioral of perceptron_layer is
+    component perceptron is
+        Port ( input : in mem_in_1d;
+               weight : in mem_w_1d;
+               activation : out mem_out_1d
+        );
+    end component;
+    
+    type perc is array(weight'range(1)) of mem_w_1d(weight'range(2));
+    signal s: perc; --weights memory
+    
+    type out_perc is array(activation'range(1)) of mem_out_1d;
+    signal a: out_perc; --activation memory
+   
+begin
+    gen: for i in weight'range(1) generate
+        gen_n:for j in weight'range(2) generate
+            s(i)(j)<=weight(i,j);
+        end generate;
+        perc_inst: perceptron port map(
+            input=>input,
+            weight=>s(i),
+            activation => a(i)
+        );
+    end generate;
+
+end Behavioral;
