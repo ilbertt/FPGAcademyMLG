@@ -45,7 +45,7 @@ for _ in range(0,m):
 	v_set_x.append(a)
 	v_set_y.append(i)
 
-model.fit(np.array(t_set_x), np.array(t_set_y), epochs=20)
+model.fit(np.array(t_set_x), np.array(t_set_y), epochs=100)
 model.evaluate(np.array(v_set_x),np.array(v_set_y))
 calssifications=model.predict(np.array(v_set_x))
 print(model.predict(np.array([[14,17,16,3,2,16,15,10,15,17,1,16,8,14,15,19,19,8,12,3]])))
