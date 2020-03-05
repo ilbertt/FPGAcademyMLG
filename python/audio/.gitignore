@@ -1,0 +1,5 @@
+#ignora true_recs per evitare di caricare i samples su github
+true_recs/
+
+#ignora il file generato da wav.py
+samples.npy
