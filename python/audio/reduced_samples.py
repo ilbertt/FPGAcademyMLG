@@ -6,8 +6,8 @@ threshold = 1000	# maximum amplitude of background noise
 reduced_samples = 5500		# number of samples of npy array used to train the neural net
 b = np.zeros(reduced_samples)
 
-# the array of npy samples is saved in C:\\Users\\Massimo Albarello\\Desktop\\Docs\\PoliMi\\FPGA Academy\\GitHubMLG\\audio\\samples.npy and loaded into "a"
-a = np.load('C:\\Users\\Massimo Albarello\\Desktop\\Docs\\PoliMi\\FPGA Academy\\GitHubMLG\\audio\\samples.npy')
+# the array of npy samples is saved in samples.npy and loaded into "a"
+a = np.load('samples.npy')
 samples = a.size
 a = np.reshape(a, samples)
 
