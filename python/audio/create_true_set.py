@@ -18,7 +18,7 @@ for file in files:
 	f, keyword = wav.read(path+"/"+file) 
 	keyword = functions.resample(keyword, f, fs)	# resample keyword to 44100 hz
 	keyword = functions.threshold_resize(keyword, threshold, length)	# keep only significant samples of the keyword
-	if keyword.size != 1:	# threshold_resize returns array [0] if keyword is not valid
+	if len(keyword) != 1:	# threshold_resize returns array [0] if keyword is not valid
 		keyword = functions.resample(keyword, fs, fs/4)		# resample keyword to 11025 hz
 	true_set.append(keyword)	# append keywords to list
 
