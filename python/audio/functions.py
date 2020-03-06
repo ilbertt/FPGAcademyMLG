@@ -5,7 +5,7 @@ from scipy import signal as sg
 def threshold_resize(sample, threshold, length):
 	arr=list(map(lambda a: True if a>threshold else False, sample))
 	th_index=arr.index(True)
-	if (th_index<len(sample)-lenght):
+	if (th_index<len(sample)-length):
 		sample=sample[th_index:th_index+length]
 		return sample
 	else:
