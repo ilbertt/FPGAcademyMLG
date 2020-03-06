@@ -1,3 +1,5 @@
+var rec_duration = 2000; //2000ms=2s
+
 var audioBlob, audioUrl;
 
 var gumStream; 						//stream from getUserMedia()
@@ -37,7 +39,8 @@ function startRec(){
             document.getElementById("rec_delete").style.display="block";
             document.getElementById("listen").style.display="block";
             document.getElementById("rec_send").style.display="block";
-        }, 3000);
+            document.getElementById("rec_send").textContent="Invia";
+        }, rec_duration);
     })
     .catch(mediaErrorCallback);
 }
@@ -57,6 +60,7 @@ function listenRec(){ //riascolta
 }
 
 function sendRec(){ //invia
+    document.getElementById("rec_send").textContent="Invio...";
     var metadata = {
         contentType: 'audio/wav',
     };
@@ -76,6 +80,7 @@ function sendRec(){ //invia
         document.getElementById("rec_delete").style.display="none";
         document.getElementById("listen").style.display="none";
         document.getElementById("rec_send").style.display="none";
+        document.getElementById("rec_send").textContent="Invia";
     });
 }
 
@@ -87,6 +92,7 @@ function deleteRec(){ //riparti da capo
     document.getElementById("rec_delete").style.display="none";
     document.getElementById("listen").style.display="none";
     document.getElementById("rec_send").style.display="none";
+    document.getElementById("rec_send").textContent="Invia";
 }
 
 function example(){ //ascolta esempio
