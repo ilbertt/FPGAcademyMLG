@@ -8,6 +8,7 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext;
 
 function startRec(){
+    document.getElementById("rec_start").textContent="Attendi...";
     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
     .then(stream => {
         audioContext = new AudioContext();
@@ -37,7 +38,12 @@ function startRec(){
             document.getElementById("listen").style.display="block";
             document.getElementById("rec_send").style.display="block";
         }, 3000);
-    });
+    })
+    .catch(mediaErrorCallback);
+}
+
+function mediaErrorCallback(error){ //alert errori di navigator.mediaDevices callback
+    alert(error);
 }
 
 function exportAudio(blob){
@@ -64,6 +70,7 @@ function sendRec(){ //invia
         console.log('Uploaded blob!');
 
         document.getElementById("rec_start").style.display="block";
+        document.getElementById("rec_start").textContent="Registra";
         document.getElementById("rec").style.display="none";
 
         document.getElementById("rec_delete").style.display="none";
@@ -74,6 +81,7 @@ function sendRec(){ //invia
 
 function deleteRec(){ //riparti da capo
     document.getElementById("rec_start").style.display="block";
+    document.getElementById("rec_start").textContent="Registra";
     document.getElementById("rec").style.display="none";
     
     document.getElementById("rec_delete").style.display="none";
@@ -81,7 +89,12 @@ function deleteRec(){ //riparti da capo
     document.getElementById("rec_send").style.display="none";
 }
 
-function example(){
+function example(){ //ascolta esempio
     const audio_example = new Audio('./sample.wav');
     audio_example.play();
+}
+
+window.onerror = function(msg, url, linenumber) { //alert errori javascript
+    alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+    return true;
 }
