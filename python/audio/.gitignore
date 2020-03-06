@@ -3,3 +3,6 @@ true_recs/
 
 #ignora il file generato da wav.py
 samples.npy
+
+#ignora il true_set generato da create_true_set.py
+true_set.py
