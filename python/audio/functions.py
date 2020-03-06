@@ -17,6 +17,6 @@ def thresold_resize(sample,thresold, length):
 	else:
 		return 0
 
-def resample(sample, s_factor):
-	sample=sg.resample(sample, int(len(sample)/s_factor))
+def resample(sample, f, fs):
+	sample=sg.resample(sample, int(len(sample)/(f/fs)))
 	return sample
