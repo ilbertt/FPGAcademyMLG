@@ -2,7 +2,7 @@ import numpy as np
 from scipy import signal as sg
 
 # resizes "sample" to "lenght" starting from index of the first element above "threshold"
-def thresold_resize(sample, threshold, length):
+def threshold_resize(sample, threshold, length):
 	arr=list(map(lambda a: True if a>threshold else False, sample))
 	th_index=arr.index(True)
 	if (th_index<len(sample)-lenght):
