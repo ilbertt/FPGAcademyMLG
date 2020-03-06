@@ -42,7 +42,7 @@
       <a href="#" onclick="example()" id="example">Ascolta esempio</a>
       <p>2- Premi il pulsante sottostante per iniziare a registrare.</p>
       <p>3- Pronuncia "GABER".</p>
-      <p><b>N.B.</b> La registrazione sarà arrestata automaticamente dopo <b>3 secondi</b></p>
+      <p><b>N.B.</b> La registrazione sarà arrestata automaticamente dopo <b><span id="rec_duration"></span> secondi</b></p>
       <h1 id="rec" style="display: none;">ACQUISIZIONE...</h1>
       
       <a href="#" onclick="startRec()" id="rec_start">Registra</a>
@@ -73,6 +73,8 @@
           console.error(e);
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
         }
+
+        document.getElementById("rec_duration").textContent=rec_duration/1000; //rec_duration è in ms
       });
     </script>
     <script src="recorder.js"></script> <!--downloaded from https://raw.githubusercontent.com/mattdiamond/Recorderjs/master/dist/recorder.js-->
