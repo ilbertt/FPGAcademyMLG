@@ -15,6 +15,8 @@ array = np.load('true_set.npy')
 for i in range (0, len(array)):
 	keyword = array[i]
 	print(i)
+	# add data type in order to play the sound
+	keyword=np.array(keyword, dtype='int16')
 	sd.play(keyword, fs)
 	time.sleep(2)	
 	## uncomment to see the fourier transform

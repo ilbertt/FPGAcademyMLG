@@ -37,7 +37,8 @@ for file in files:
 	print("total number of samples:", sample.size)
 	print("sample rate:", fs)
 	print("\n")
-
+	# add data type in order to play the sound
+	sample=np.array(sample, dtype='int16')
 	# play each keyword in the firebase bucket every 2 seconds 
 	sd.play(sample, fs)
 	time.sleep(2)	
