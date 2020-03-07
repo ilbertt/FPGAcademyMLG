@@ -5,4 +5,7 @@ true_recs/
 samples.npy
 
 #ignora il true_set generato da create_true_set.py
-true_set.py
+true_set.npy
+
+#ignora folder generato runnando uno script python
+__pycache__
