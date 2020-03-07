@@ -12,10 +12,19 @@ import time
 # np.set_printoptions(threshold = sys.maxsize) #print the whole array
 
 
-# download all .wav files from firebase bucket into true_recs local folder
-os.popen("gsutil cp -r gs://fpgacademy-mlg.appspot.com/true_recs/*.wav true_recs").read()
-
+# download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
 path="true_recs"
+files=os.popen("gsutil ls gs://fpgacademy-mlg.appspot.com/true_recs/").read()
+files=files.replace("gs://fpgacademy-mlg.appspot.com/true_recs/","")
+files=files.split('\n')
+files.remove('')
+files.remove('')
+ex_files=os.listdir(path)
+for file in files:
+	if(not(file in ex_files)):
+		os.popen("gsutil cp -r gs://fpgacademy-mlg.appspot.com/true_recs/"+file+" "+path).read()
+
+
 files=os.listdir(path)
 
 print("number of keywords:", len(files))
