@@ -5,7 +5,7 @@ import functions	# our custom functions from functions.py
 
 threshold = 1000	# set threshold for keyword resize [wav sample amplitude]
 fs = 44100			# sample rate
-length = 5500		# significant number of samples for each keyword
+length = 22000		# significant number of samples for each keyword
 
 # download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
 path="true_recs"
