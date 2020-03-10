@@ -1,11 +1,8 @@
 #ignora true_recs per evitare di caricare i samples su github
 true_recs/
 
-#ignora il file generato da wav.py
-samples.npy
-
 #ignora il true_set generato da create_true_set.py
 true_set.npy
 
-#ignora folder generato runnando uno script python
-__pycache__
+#ignora cartella di cache autogenerata da python
+__pycache__/
