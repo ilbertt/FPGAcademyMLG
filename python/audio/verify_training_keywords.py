@@ -12,7 +12,12 @@ fs = 11025
 # load keywords in "array" from local "true_set" file
 array = np.load('true_set.npy')
 
-for i in range (0, len(array)):
+# open file containing the index of the first keyword that hasn't been verified yet
+index_file = open("last_keyword_index.txt","r+")
+index = int(index_file.read())
+
+# starts playing keywords from "index" in order not to play previously verified keywords
+for i in range (index, len(array)):
 	keyword = array[i]
 	print(i)
 	# add data type in order to play the sound
@@ -27,3 +32,10 @@ for i in range (0, len(array)):
 	# plt.title(i)
 	# plt.yscale("log")
 	# plt.show()
+
+# save the index after the last keyword verified
+index_file.seek(0, 0)
+index_file.truncate(0)
+index_file.write("%d" % (len(array)))
+
+index_file.close()

@@ -6,3 +6,6 @@ true_set.npy
 
 #ignora cartella di cache autogenerata da python
 __pycache__/
+
+#ignora file contenente l'indice dell'ultima keyword riprodotta da verify_training_keyword
+last_keyword_index.txt
