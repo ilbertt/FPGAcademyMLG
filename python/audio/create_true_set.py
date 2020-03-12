@@ -9,13 +9,13 @@ length = 22000		# significant number of samples for each keyword
 
 # download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
 path="true_recs"
-files=os.popen("gsutil ls gs://fpgacademy-mlg.appspot.com/true_recs/").read()
-files=files.replace("gs://fpgacademy-mlg.appspot.com/true_recs/","")
-files=files.split('\n')
-files.remove('')
-files.remove('')
+fb_files=os.popen("gsutil ls gs://fpgacademy-mlg.appspot.com/true_recs/").read()
+fb_files=fb_files.replace("gs://fpgacademy-mlg.appspot.com/true_recs/","")
+fb_files=fb_files.split('\n')
+fb_files.remove('')
+fb_files.remove('')
 ex_files=os.listdir(path)
-for file in files:
+for file in fb_files:
 	if(not(file in ex_files)):
 		os.popen("gsutil cp -r gs://fpgacademy-mlg.appspot.com/true_recs/"+file+" "+path).read()
 
