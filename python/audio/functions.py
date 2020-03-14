@@ -1,7 +1,6 @@
 import sounddevice as sd
 import time
 import matplotlib.pyplot as plt 
-
 import numpy as np
 from scipy import signal as sg
 
@@ -30,7 +29,8 @@ def resample(sample, f, fs):
 # return keyword and index of maximum peak
 def normalize(keyword, maxScale):
 	maxPeak = np.amax(np.absolute(keyword))	# maximum peak of keyword
-	keyword = keyword*(maxScale/maxPeak) # normalize using maxScale proportion
+	if(maxPeak != 0):
+		keyword = keyword*(maxScale/maxPeak) # normalize using maxScale proportion
 
 	return keyword
 

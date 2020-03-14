@@ -1,8 +1,12 @@
-#ignora true_recs per evitare di caricare i samples su github
+#ignora true_recs
 true_recs/
 
-#ignora il true_set generato da create_true_set.py
+# ignore false_recs
+false_recs/
+
+#ignora i set generati
 true_set.npy
+false_set.npy
 
 #ignora cartella di cache autogenerata da python
 __pycache__/
