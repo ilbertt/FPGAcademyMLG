@@ -1,9 +1,6 @@
 #ignora true_recs
 true_recs/
 
-# ignore false_recs
-false_recs/
-
 #ignora i set generati
 true_set.npy
 false_set.npy
