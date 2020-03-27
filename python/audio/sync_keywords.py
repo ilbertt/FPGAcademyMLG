@@ -12,6 +12,11 @@ fb_files=fb_files.split('\n')
 fb_files.remove('')
 fb_files.remove('')
 
+print('\n')
+print('Firebase keywords:', len(fb_files))
+print('Local keywords (before sync):', len(current_files))
+print('\n')
+
 #check if there are new keywords to be downloaded from Firebase
 i=0
 for file in fb_files:
@@ -26,7 +31,10 @@ for file in current_files:
 		os.remove(path+"/"+file)
 		j=j+1
 
-print('\nFINISHED!\n')
-print('New keywords downloaded:',i)
-print('Keywords deleted:',j)
+current_files=os.listdir(path) #rescan for check
+
+print('FINISHED!\n')
+print('New keywords downloaded:', i)
+print('Keywords deleted:', j)
+print('Local keywords (after sync):', len(current_files))
 print('\n')

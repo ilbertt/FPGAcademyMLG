@@ -1,6 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 import scipy.io.wavfile as wav
+import os
 import functions	# our custom functions from functions.py
 
 threshold = 10000	# set threshold for keyword resize [wav sample amplitude]
@@ -11,10 +12,19 @@ goBackSize = 2000	# significant interval before and after the maximum peak
 
 # list all .wav files from firebase storage
 path="true_recs"
+current_files=os.listdir(path) #list of keywords currently in local true_recs folder
 
-# choose the .wav file that you want to test from the list and assign it to "file"
-file = input(".wav name (with extension): ")	# get name of wav file from user
-f, keyword = wav.read(path+"/"+file) 
+# choose the .wav file or the index that you want to test from the list and assign it to "file"
+file = input(".wav name with extension (leave blank if you don't know): ")	# get name of wav file from user
+if(file==''):   # don't know the keyword file name, check for keyword index
+    index = int(input("number of the keyword: "))  # get the index of keyword from user
+    file = current_files[index]
+    print('\n You selected keyword wav:', file)
+else:
+    index = current_files.index(file)   # index of the wav file selected
+    print('\n You selected keyword index:', index)
+
+f, keyword = wav.read(path+"/"+file)    # open desired wav
 
 # test original .wav file
 functions.test(keyword, f, threshold, "original")

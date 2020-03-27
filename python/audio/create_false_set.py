@@ -14,6 +14,7 @@ false_set = []	# list of false keywords
 path="false_recs"
 
 false_recs = os.listdir(path) 	# list of songs currently in local false_recs folder
+counter = 0
 for file in false_recs:
 	# split each .wav file in .npy arrays of equal length
 	f, song = wav.read(path+"/"+file)
@@ -30,9 +31,16 @@ for file in false_recs:
 		# sample = np.array(sample, dtype='int16')
 		# sd.play(sample, fs/4)
 		# time.sleep(0.55)
+		if(sample.any()):
+			false_set.append(sample)	# append sample to list
+			counter = counter+1
 
-		false_set.append(sample)	# append sample to list
+print('\nFalse keyword generated:',counter)
 
 false_set = np.array(false_set)
 # save all .npy arrays ready for training in "false_set" 
 np.save("false_set", false_set)
+
+check = np.load('false_set.npy')	# load the saved array to check
+print('\nFALSE_SET saved. Lenght:', len(check))	# log
+print('\n')
