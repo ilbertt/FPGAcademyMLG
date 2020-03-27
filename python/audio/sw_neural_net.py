@@ -5,9 +5,12 @@ from keras import backend as K
 from keras import models
 
 t_setx, t_sety=np.load("dataset.npy", allow_pickle=True)
+
 t_setx=np.vstack(t_setx).astype(np.float)
 t_setx=t_setx.reshape((len(t_setx),1,1,-1))
 t_sety=np.vstack(t_sety).astype(np.float)
+t_sety=t_sety.reshape((len(t_sety),1,1,-1))
+
 print(t_setx[0].shape)
 print(t_sety[0].shape)
 
@@ -24,6 +27,7 @@ model=keras.Sequential([
 ])
 model.summary()
 model.compile(optimizer=tf.optimizers.Adam(),loss="binary_crossentropy")
+
 model.fit(x=t_setx, y=t_sety, epochs=100)
 np.save("weights", np.array(model.get_weights()))
 #layer_outputs = [layer.output for layer in model.layers]
