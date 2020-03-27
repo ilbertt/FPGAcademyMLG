@@ -1,17 +1,2 @@
-#ignora true_recs
-true_recs/
-
-#ignora i set generati
-true_set.npy
-false_set.npy
-dataset.npy
-
-#ignora file generati dal training (tensorfow)
-weights.npy
-model.h5
-
-#ignora cartella di cache autogenerata da python
+#ignora file autogenerati da pyhton
 __pycache__/
-
-#ignora file contenente l'indice dell'ultima keyword riprodotta da verify_training_keyword
-last_keyword_index.txt

@@ -1,0 +1,8 @@
+#ignora true_recs
+true_recs/
+
+#ignora i set generati
+arrays/
+
+#ignora file contenente l'indice dell'ultima keyword riprodotta da verify_training_keyword
+tools/last_keyword_index.txt

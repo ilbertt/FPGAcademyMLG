@@ -1,6 +1,6 @@
 import numpy as np
-true_set=np.load("true_set.npy")
-false_set=np.load("false_set.npy")
+true_set=np.load("arrays/true_set.npy")
+false_set=np.load("arrays/false_set.npy")
 
 y_true=np.zeros(len(true_set))+1    # array of 1 for true_set
 y_false=np.zeros(len(false_set))    # array of 0 for false_set
@@ -21,4 +21,4 @@ print('Dataset Y:',len(dataset_y))      # log
 print('\n')
 
 dataset=np.array([dataset_x,dataset_y])
-np.save("dataset", dataset)
+np.save("arrays/dataset", dataset)
