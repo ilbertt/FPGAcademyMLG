@@ -1,4 +1,4 @@
-var rec_duration = 2000; //2000ms=2s
+var rec_duration = 1000; //1000ms=1s
 var num_sent = 0;       // number of keywords sent at each session
 
 var audioBlob, audioUrl;
@@ -100,7 +100,7 @@ function deleteRec(){ //riparti da capo
 }
 
 function example(){ //ascolta esempio
-    const audio_example = new Audio('./sample.wav');
+    const audio_example = new Audio('./new_sample.wav');
     audio_example.play();
 }
 
