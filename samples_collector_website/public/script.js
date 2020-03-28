@@ -1,4 +1,5 @@
 var rec_duration = 2000; //2000ms=2s
+var num_sent = 0;       // number of keywords sent at each session
 
 var audioBlob, audioUrl;
 
@@ -72,6 +73,9 @@ function sendRec(){ //invia
 
     storageRef.child(audioName).put(audioBlob, metadata).then(function(snapshot) { //carica file audio
         console.log('Uploaded blob!');
+        
+        num_sent++;
+        document.getElementById("num_sent").textContent=num_sent;
 
         document.getElementById("rec_start").style.display="block";
         document.getElementById("rec_start").textContent="Registra";
