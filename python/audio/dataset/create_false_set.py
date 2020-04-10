@@ -8,7 +8,7 @@ import sounddevice as sd
 # our custom functions
 import sys
 sys.path.insert(1, './utils')
-import functions
+import functions # pylint: disable=import-error
 ########
 
 sample_len = 22000  # length of each sample cut from "song"

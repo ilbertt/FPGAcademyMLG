@@ -5,7 +5,7 @@ import numpy as np
 # our custom functions
 import sys
 sys.path.insert(1, './utils')
-import functions
+import functions # pylint: disable=import-error
 ########
 
 threshold = 10000	# set threshold for keyword resize [wav sample amplitude]

@@ -8,7 +8,7 @@ import time
 # our custom functions
 import sys
 sys.path.insert(1, '../utils')
-import functions
+import functions # pylint: disable=import-error
 ########
 
 #np.set_printoptions(threshold = sys.maxsize) #print the whole array
