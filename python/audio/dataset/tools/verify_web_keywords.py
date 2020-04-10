@@ -15,6 +15,7 @@ import time
 #### download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
 path="./../true_recs"
 current_files=os.listdir(path) #list of keywords currently in local true_recs folder
+current_files.sort()
 
 # list files from Firebase bucket
 fb_files=os.popen("gsutil ls gs://fpgacademy-mlg.appspot.com/true_recs/").read()
@@ -35,6 +36,7 @@ for file in current_files:
 		os.remove(path+"/"+file)
 
 files=os.listdir(path) #new list of files
+flies.sort()
 
 print("Number of local keywords:", len(files))
 print("\n")

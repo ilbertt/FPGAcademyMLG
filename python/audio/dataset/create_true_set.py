@@ -16,6 +16,7 @@ goBackSize = 2000	# significant interval before and after the maximum peak
 
 path="true_recs"
 files=os.listdir(path)
+files.sort()
 
 true_set = []	# list of keywords
 

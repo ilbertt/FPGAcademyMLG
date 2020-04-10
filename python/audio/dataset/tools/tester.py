@@ -18,6 +18,7 @@ goBackSize = 2000	# significant interval before and after the maximum peak
 # list all .wav files from firebase storage
 path="./../true_recs"
 current_files=os.listdir(path) #list of keywords currently in local true_recs folder
+current_files.sort()
 
 # choose the .wav file or the index that you want to test from the list and assign it to "file"
 file = input(".wav name with extension (leave blank if you don't know): ")	# get name of wav file from user
