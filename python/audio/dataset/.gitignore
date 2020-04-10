@@ -5,4 +5,4 @@ true_recs/
 arrays/
 
 #ignora file contenente l'indice dell'ultima keyword riprodotta da verify_training_keyword
-tools/last_keyword_index.txt
+tools/*.txt
