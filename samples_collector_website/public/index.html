@@ -12,6 +12,8 @@
     <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
 
     <script defer src="/__/firebase/init.js"></script>
+    <script language="javascript" src="dsp.js"></script> <!--downloaded from https://raw.githubusercontent.com/corbanbrook/dsp.js/master/dsp.js-->
+    <script src="plotly-latest.min.js"></script> <!--Plotly library-->
 
     <!-- <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
@@ -44,7 +46,7 @@
       <p>3- Pronuncia "GABER".</p>
       <p><b>N.B.</b> La registrazione sarà arrestata automaticamente dopo <b><span id="rec_duration"></span> secondi</b></p>
       <h1 id="rec" style="display: none;">ACQUISIZIONE...</h1>
-      
+      <div id="plot"></div>
       <a href="#" onclick="startRec()" id="rec_start">Registra</a>
 
       <a href="#" onclick="deleteRec()" id="rec_delete" style="display: none; margin-top: 10px; background: #ff3c00;">Annulla</a>

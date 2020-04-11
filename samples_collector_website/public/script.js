@@ -28,11 +28,13 @@ function startRec(){
         document.getElementById("rec_delete").style.display="none";
         document.getElementById("listen").style.display="none";
         document.getElementById("rec_send").style.display="none";
+        //document.getElementById("plot").style.display="none";
 
         setTimeout(() => { //stop rec dopo 3 secondi
             rec.stop();
             gumStream.getAudioTracks()[0].stop(); //stop microphone access
             rec.exportWAV(exportAudio);
+            rec.getBuffer(printFFT);
 
             document.getElementById("rec_start").style.display="none";
             document.getElementById("rec").style.display="none";
@@ -41,6 +43,8 @@ function startRec(){
             document.getElementById("listen").style.display="block";
             document.getElementById("rec_send").style.display="block";
             document.getElementById("rec_send").textContent="Invia";
+            document.getElementById("plot").style.display="block";
+            
         }, rec_duration);
     })
     .catch(mediaErrorCallback);
@@ -55,6 +59,58 @@ function exportAudio(blob){
     audioUrl = URL.createObjectURL(blob);
 }
 
+function printFFT(buffer){
+    //console.log(buffer, buffer[0].length);
+
+    var dataBuffer = buffer[0].slice(0,Math.pow(2,15));
+    var frameBufferSize = dataBuffer.length;
+    var bufferSize = frameBufferSize/2;
+
+    var signal = new Float32Array(bufferSize);
+    var peak = new Float32Array(bufferSize);
+
+    var fft = new FFT(bufferSize, 44100);
+    
+    signal = DSP.getChannel(DSP.MIX, dataBuffer);
+
+    // perform forward transform
+    fft.forward(signal);
+    
+    // calculate peak values
+    for ( var i = 0; i < bufferSize; i++ ) {
+        fft.spectrum[i] *= -1 * Math.log((fft.bufferSize/2 - i) * (0.5/fft.bufferSize/2)) * fft.bufferSize; // equalize, attenuates low freqs and boosts highs
+        
+        if ( peak[i] < fft.spectrum[i] ) {
+            peak[i] = fft.spectrum[i];
+        } else {
+            peak[i] *= 0.99; // peak slowly falls until a new peak is found
+        }
+    }
+
+    //console.log(fft.spectrum);
+
+    var x = []; for(i=1;i<=fft.spectrum.length;i++){ x.push(i);} //generate x axis values
+    var data = [
+        {
+            x: x, 
+            y: fft.spectrum, 
+            type: 'scatter'
+        }
+    ];
+    var layout = {
+        xaxis: {
+          autorange: true
+        },
+        yaxis: {
+          autorange: true, 
+          type: 'log'
+        }
+    };
+
+    PLOT = document.getElementById('plot');
+    Plotly.newPlot( PLOT, data, layout);
+}
+
 function listenRec(){ //riascolta
     const audio = new Audio(audioUrl);
     audio.play();
@@ -62,6 +118,7 @@ function listenRec(){ //riascolta
 
 function sendRec(){ //invia
     document.getElementById("rec_send").textContent="Invio...";
+    document.getElementById("plot").style.display="none";
     var metadata = {
         contentType: 'audio/wav',
     };
@@ -97,6 +154,7 @@ function deleteRec(){ //riparti da capo
     document.getElementById("listen").style.display="none";
     document.getElementById("rec_send").style.display="none";
     document.getElementById("rec_send").textContent="Invia";
+    document.getElementById("plot").style.display="none";
 }
 
 function example(){ //ascolta esempio
