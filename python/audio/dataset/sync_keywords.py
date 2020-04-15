@@ -1,8 +1,13 @@
 ### Sync local keywords folder with Firebase bucket
 import os
 
-### download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
+### check if local true_recs folder exists, otherwise create it
 path="true_recs"
+if not os.path.exists(path):
+	print("creating directory 'true_recs'...")
+	os.makedirs(path)
+
+### download all .wav files from firebase bucket into true_recs local folder if not already in true_recs directory
 current_files=os.listdir(path) #list of keywords currently in local true_recs folder
 
 # list files from Firebase bucket
