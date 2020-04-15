@@ -43,9 +43,14 @@ for file in false_recs:
 print('\nFalse keyword generated:',counter)
 
 false_set = np.array(false_set)
-# save all .npy arrays ready for training in "false_set" 
-np.save("arrays/false_set", false_set)
 
-check = np.load('arrays/false_set.npy')	# load the saved array to check
+arrays_path = "arrays/"
+if not os.path.exists(arrays_path):
+	print("creating directory 'arrays'...")
+	os.makedirs(arrays_path)
+# save all .npy arrays ready for training in "false_set" 
+np.save(arrays_path+"false_set", false_set)
+
+check = np.load(arrays_path+"false_set.npy")	# load the saved array to check
 print('\nFALSE_SET saved. Lenght:', len(check))	# log
 print('\n')

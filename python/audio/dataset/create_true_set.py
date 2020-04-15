@@ -20,7 +20,7 @@ files.sort()
 
 true_set = []	# list of keywords
 
-print('\nLocal keywords:', len(files))	# log
+print('\nLocal wavs:', len(files))	# log
 
 counter = 0	# only for log
 for file in files:
@@ -39,8 +39,14 @@ for file in files:
 print('\nProcessed keywords:', counter)	# log
 
 true_set = np.array(true_set)
-np.save("arrays/true_set", true_set)
 
-check = np.load('arrays/true_set.npy')	# load the saved array to check
+arrays_path = "arrays/"
+if not os.path.exists(arrays_path):
+	print("creating directory 'arrays'...")
+	os.makedirs(arrays_path)
+
+np.save(arrays_path+"true_set", true_set)
+
+check = np.load(arrays_path+"true_set.npy")	# load the saved array to check
 print('\nTRUE_SET saved. Lenght:', len(check))	# log
 print('\n')
