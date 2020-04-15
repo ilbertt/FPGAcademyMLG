@@ -33,6 +33,6 @@ for kw_index in rand_index:
     # add data type in order to play the sound
     kw=np.array(kw, dtype='int16')
     # 
-    print("#:", kw_index, "wav:", current_files[kw_index], ", len:", len(kw))
+    print("#:", kw_index, ",wav:", current_files[kw_index], ", len:", len(kw))
     functions.test(kw, f, threshold, "#: "+str(kw_index))
     

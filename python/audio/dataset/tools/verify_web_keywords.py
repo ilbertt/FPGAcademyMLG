@@ -36,7 +36,7 @@ for file in current_files:
 		os.remove(path+"/"+file)
 
 files=os.listdir(path) #new list of files
-flies.sort()
+files.sort()
 
 print("Number of local keywords:", len(files))
 print("\n")
