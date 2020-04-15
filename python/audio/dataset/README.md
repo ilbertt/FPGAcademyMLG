@@ -71,7 +71,7 @@ Each true keyword is composed by **5500** samples.
 ###### Log Output
 
 ```
-Local keywords: < # of wavs in true_recs = N >
+Local wavs: < # of wavs in true_recs = N >
 
 < algorithm iteration for each keyword >
 
