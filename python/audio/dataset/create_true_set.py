@@ -10,7 +10,8 @@ import functions # pylint: disable=import-error
 
 threshold = 10000	# set threshold for keyword resize [wav sample amplitude]
 fs = 44100			# sample rate
-length = 22000		# significant number of samples for each keyword
+f_final = 4096		# because we need 2048 samples
+length = 22050		# significant number of samples for each keyword
 maxScale = 30000	# normalizing scale
 goBackSize = 2000	# significant interval before and after the maximum peak
 
@@ -31,7 +32,7 @@ for file in files:
 	#keyword = keyword[(peakIndex - padding) : (peakIndex + padding)]	# exctract significant samples of the keyword
 
 	keyword = functions.threshold_resize(keyword, threshold, length, goBackSize)	# keep only significant samples of the keyword
-	keyword = functions.resample(keyword, fs, fs/4)		# resample keyword to 11025 hz
+	keyword = functions.resample(keyword, fs, f_final)		# resample keyword to 11025 hz
 
 	true_set.append(keyword)	# append keyword to list
 	counter = counter+1

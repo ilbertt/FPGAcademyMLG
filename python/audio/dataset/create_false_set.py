@@ -11,8 +11,9 @@ sys.path.insert(1, './utils')
 import functions # pylint: disable=import-error
 ########
 
-sample_len = 22000  # length of each sample cut from "song"
+sample_len = 22050  # length of each sample cut from "song"
 fs = 44100			# sample rate
+f_final = 4096		# because we need 2048 samples
 maxScale = 30000	# normalizing scale
 
 false_set = []	# list of false keywords
@@ -30,7 +31,7 @@ for file in false_recs:
 	for sample in song:
 		sample = functions.resample(sample, f, fs)		# resample sample to 44100 hz
 		sample = functions.normalize(sample, maxScale)	# normalize
-		sample = functions.resample(sample, fs, fs/4)		# resample sample to 11025 hz
+		sample = functions.resample(sample, fs, f_final)		# resample sample to 11025 hz
 
 		# # play .wav file
 		# sample = np.array(sample, dtype='int16')

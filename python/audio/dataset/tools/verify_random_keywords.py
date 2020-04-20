@@ -13,7 +13,7 @@ import functions # pylint: disable=import-error
 
 #np.set_printoptions(threshold = sys.maxsize) #print the whole array
 
-fs = 11025
+fs = 4096
 num_random = 20 # number of random keywords
 threshold = 10000
 
