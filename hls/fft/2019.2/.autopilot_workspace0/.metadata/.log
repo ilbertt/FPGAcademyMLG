@@ -1,0 +1,999 @@
+!SESSION 2020-04-18 20:45:40.646 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-18 20:46:16.165
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-18 20:46:28.233
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 20:50:06.798
+!MESSAGE Indexed 'vector_addition' (0 sources, 0 headers) in 0.047 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 20:50:14.703
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 20:50:14.703
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 20:50:14.703
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 21:09:46.718
+!MESSAGE Indexed 'vector_addition' (0 sources, 0 headers) in 0.031 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 21:21:39.614
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.844 sec: 2,442 declarations; 3,114 references; 0 unresolved inclusions; 6 syntax errors; 1 unresolved names (0.018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 21:22:41.010
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.765 sec: 2,442 declarations; 3,114 references; 0 unresolved inclusions; 6 syntax errors; 1 unresolved names (0.018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 21:25:23.412
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.781 sec: 2,442 declarations; 3,114 references; 0 unresolved inclusions; 2 syntax errors; 1 unresolved names (0.018%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-04-18 21:25:46.825
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-18 21:25:47.679
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 21:25:48.741
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.viewers.model.ViewerInputUpdate$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 21:25:48.741
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 21:25:48.741
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+!SESSION 2020-04-18 22:54:29.544 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-18 22:54:47.559
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-18 22:54:48.199
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-18 22:54:56.419
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 22:55:08.780
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 22:55:08.842
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 22:55:08.921
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 22:55:11.149
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 3.38 sec: 2,442 declarations; 3,114 references; 0 unresolved inclusions; 2 syntax errors; 1 unresolved names (0.018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 23:08:01.437
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 1.31 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 2 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 23:11:39.088
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.971 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-04-18 23:23:22.712
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-18 23:23:23.509
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 23:23:24.259
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.viewers.model.ViewerInputUpdate$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 23:23:24.259
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 23:23:24.259
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+!SESSION 2020-04-18 23:28:27.517 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-18 23:28:49.743
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-18 23:28:50.412
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-18 23:29:01.187
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 23:30:35.554
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 23:30:35.585
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-18 23:30:35.585
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 23:30:37.226
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 3.69 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 23:34:45.881
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 1.69 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-18 23:38:00.259
+!MESSAGE Indexed 'vector_addition' (3 sources, 26 headers) in 0.922 sec: 2,456 declarations; 3,165 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-04-18 23:42:07.045
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-18 23:42:07.842
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 23:42:08.608
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-18 23:42:08.608
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+!SESSION 2020-04-19 21:13:01.285 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-19 21:13:36.772
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-19 21:13:37.397
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-19 21:13:45.640
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-19 21:14:32.282
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-19 21:14:32.297
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-19 21:14:32.297
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:14:35.406
+!MESSAGE Indexed 'vector_addition' (3 sources, 26 headers) in 4.69 sec: 2,456 declarations; 3,165 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:14:45.509
+!MESSAGE Indexed 'vector_addition' (3 sources, 26 headers) in 1.2 sec: 2,456 declarations; 3,165 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:16:11.928
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:16:11.943
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:24:09.722
+!MESSAGE Indexed 'vector_addition' (3 sources, 26 headers) in 1.03 sec: 2,449 declarations; 3,125 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:25:24.059
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 1 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:25:45.510
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:25:45.510
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:25:47.005
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:25:47.005
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:25:50.812
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:25:50.812
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:25:51.915
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:25:51.915
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:26:00.457
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:26:00.457
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:26:01.957
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:26:01.957
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:34:12.201
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:34:12.201
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:34:16.951
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:34:16.951
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:34:19.239
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:34:19.239
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:34:38.034
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:34:38.034
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.ui 4 0 2020-04-19 21:38:02.894
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at java.base/java.io.File.<init>(Unknown Source)
+	at com.autoesl.autopilot.ui.platform.actions.NewSourceFileAction.run(NewSourceFileAction.java:56)
+	at com.autoesl.autopilot.ui.platform.actions.NewSourceFileAction.run(NewSourceFileAction.java:36)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.autoesl.autopilot.ui.platform.Application.start(Application.java:92)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:38:18.717
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:38:18.717
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:38:23.749
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:38:23.749
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:38:25.507
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:38:25.507
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:41:08.715
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:41:08.715
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.dltk.tcl.ui 4 0 2020-04-19 21:41:10.184
+!MESSAGE vector_addition does not exist
+!STACK 1
+org.eclipse.dltk.core.ModelException: vector_addition does not exist
+	at org.eclipse.dltk.internal.core.ModelElement.newNotPresentException(ModelElement.java:275)
+	at org.eclipse.dltk.internal.core.ModelManager.getPerProjectInfoCheckExistence(ModelManager.java:949)
+	at org.eclipse.dltk.internal.core.ScriptProject.getPerProjectInfo(ScriptProject.java:552)
+	at org.eclipse.dltk.internal.core.ScriptProject.getRawBuildpath(ScriptProject.java:1283)
+	at org.eclipse.dltk.launching.ScriptRuntime.getInterpreterInstall(ScriptRuntime.java:403)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.selectSource(TclManPagesDocumentationProvider.java:91)
+	at org.eclipse.dltk.tcl.internal.ui.documentation.TclManPagesDocumentationProvider.describeKeyword(TclManPagesDocumentationProvider.java:114)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess$5.getInfo(ScriptDocumentationAccess.java:265)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.merge(ScriptDocumentationAccess.java:88)
+	at org.eclipse.dltk.ui.documentation.ScriptDocumentationAccess.getKeywordDocumentation(ScriptDocumentationAccess.java:260)
+	at org.eclipse.dltk.internal.ui.text.hover.DocumentationHover.getHoverInfo(DocumentationHover.java:570)
+	at org.eclipse.dltk.internal.ui.text.hover.AbstractScriptEditorTextHover.getHoverInfo(AbstractScriptEditorTextHover.java:150)
+	at org.eclipse.dltk.internal.ui.text.hover.BestMatchHover.getHoverInfo(BestMatchHover.java:109)
+	at org.eclipse.dltk.internal.ui.text.hover.EditorTextHoverProxy.getHoverInfo(EditorTextHoverProxy.java:71)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+!SUBENTRY 1 org.eclipse.dltk.core 4 969 2020-04-19 21:41:10.184
+!MESSAGE vector_addition does not exist
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:42:15.523
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.781 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 21:43:48.603
+!MESSAGE Indexed 'vector_addition' (2 sources, 26 headers) in 0.673 sec: 2,442 declarations; 3,115 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 22:06:41.958
+!MESSAGE Indexed 'vector_addition' (2 sources, 28 headers) in 0.766 sec: 3,032 declarations; 3,723 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-19 22:08:48.881
+!MESSAGE Indexed 'vector_addition' (2 sources, 28 headers) in 0.828 sec: 3,032 declarations; 3,723 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-04-19 22:35:15.832
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-19 22:35:16.664
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-19 22:35:17.493
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+!SESSION 2020-04-21 22:45:44.863 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-21 22:46:23.807
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-21 22:46:24.719
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-21 22:46:35.004
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-21 22:48:08.331
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-21 22:48:08.331
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-21 22:48:08.331
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-21 23:02:07.034
+!MESSAGE Indexed 'neural_net' (1 sources, 43 headers) in 53.9 sec: 40,327 declarations; 71,863 references; 52 unresolved inclusions; 0 syntax errors; 3,681 unresolved names (3.2%)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2020-04-21 23:02:39.905
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:65)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:450)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:156)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:78)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:111)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:74)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:178)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:163)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.dispose(EclipseContextOSGi.java:99)
+	at org.eclipse.e4.core.internal.contexts.osgi.EclipseContextOSGi.bundleChanged(EclipseContextOSGi.java:141)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:908)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:213)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:120)
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:112)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:168)
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:634)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:767)
+	at org.eclipse.swt.widgets.Display.removeFilter(Display.java:4131)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.contextDisposed(MenuManagerRenderer.java:340)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-21 23:02:40.893
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-21 23:02:41.664
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.viewers.model.ViewerInputUpdate$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-21 23:02:41.664
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-04-21 23:02:41.664
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.progress.TaskBarProgressManager$1
+!SESSION 2020-04-22 18:48:49.679 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-22 18:49:38.967
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2020-04-22 18:49:39.717
+!MESSAGE Both 'com.autoesl.autopilot.ui.models' and 'com.autoesl.autopilot.ui.models' register a package for 'com.autoesl.autopilot.solution'
+
+!ENTRY org.eclipse.ui 2 2 2020-04-22 18:49:52.308
+!MESSAGE Invalid preference category path: com.autoesl.autopilot.ui.startup.preferences.AutoPilotRootPreferencePage (bundle: com.autoesl.autopilot.ui.cdfg.diagram, page: com.autoesl.autopilot.ui.cdfg.diagram.general)
+!SESSION 2020-04-22 18:48:44.011 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+Command-line arguments:  -showlocation -clean -data C:/Users/massimo/.vivado_hls/2019.2/.autopilot_workspace0 -perspective com.autoesl.autopilot.ui.platform.perspective -application com.autoesl.autopilot.ui.platform.application
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-22 18:50:03.618
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-22 18:56:34.458
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-22 18:56:34.474
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-04-22 18:56:34.474
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 18:57:50.911
+!MESSAGE Indexed 'neural_net' (2 sources, 227 headers) in 77.7 sec: 65,572 declarations; 114,413 references; 0 unresolved inclusions; 0 syntax errors; 47 unresolved names (0.026%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 19:50:17.638
+!MESSAGE Indexed 'proj' (2 sources, 28 headers) in 33.2 sec: 33,726 declarations; 57,588 references; 71 unresolved inclusions; 0 syntax errors; 2,659 unresolved names (2.8%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 19:57:23.316
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 36.4 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2020-04-22 20:44:01.988
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:64)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.ui 4 4 2020-04-22 20:44:01.996
+!MESSAGE Exception in Decorator. The 'Link File' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2020-04-22 20:44:01.996
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at com.autoesl.autopilot.ui.platform.decorators.LinkFileDecorator.decorate(LinkFileDecorator.java:64)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:253)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:104)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:377)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:311)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:40:07.971
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 36.4 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:44:32.646
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 27.2 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:45:16.126
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 27.5 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:46:00.192
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 29.6 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:48:15.348
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 29.5 sec: 62,923 declarations; 107,914 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 21:53:59.251
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 29.1 sec: 62,919 declarations; 107,802 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:10:04.620
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 30.9 sec: 62,920 declarations; 107,810 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:12:11.011
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 33.2 sec: 62,919 declarations; 107,804 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:16:19.757
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 27.2 sec: 62,920 declarations; 107,807 references; 0 unresolved inclusions; 2 syntax errors; 51 unresolved names (0.03%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:17:54.124
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 31.3 sec: 62,920 declarations; 107,808 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:24:29.958
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 28.6 sec: 62,920 declarations; 107,812 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:26:20.577
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 28.9 sec: 62,920 declarations; 107,814 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-04-22 22:35:18.463
+!MESSAGE Indexed 'proj' (2 sources, 227 headers) in 30.7 sec: 62,922 declarations; 107,832 references; 0 unresolved inclusions; 2 syntax errors; 50 unresolved names (0.029%)
+
+!ENTRY org.eclipse.cdt.core 2 0 2020-04-22 22:38:48.649
+!MESSAGE Error getting ScannerInfo: Unable to determine language for resource L/proj/testbench/stimulus_00.dat
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:86)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getElementInfo(TranslationUnit.java:454)
+	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:295)
+	at org.eclipse.cdt.internal.core.model.Parent.getChildren(Parent.java:55)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getIncludes(TranslationUnit.java:257)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.archiveInclcudeFileRecursively(ArchiveProjectAction.java:323)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.handleHeaderFile(ArchiveProjectAction.java:295)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.archiveDesignFiles(ArchiveProjectAction.java:246)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.run(ArchiveProjectAction.java:88)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.cdt.core 2 0 2020-04-22 22:38:48.790
+!MESSAGE Error getting ScannerInfo: Unable to determine language for resource L/proj/testbench/stimulus_00.res
+!STACK 0
+java.lang.Exception
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:86)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1061)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:848)
+	at org.eclipse.cdt.internal.core.model.CModelBuilder2.parse(CModelBuilder2.java:147)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parseUsingCModelBuilder(TranslationUnit.java:678)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.parse(TranslationUnit.java:666)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.buildStructure(TranslationUnit.java:465)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:261)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:427)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getElementInfo(TranslationUnit.java:454)
+	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:295)
+	at org.eclipse.cdt.internal.core.model.Parent.getChildren(Parent.java:55)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getIncludes(TranslationUnit.java:257)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.archiveInclcudeFileRecursively(ArchiveProjectAction.java:323)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.handleHeaderFile(ArchiveProjectAction.java:295)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.archiveDesignFiles(ArchiveProjectAction.java:246)
+	at com.autoesl.autopilot.ui.platform.actions.ArchiveProjectAction$1.run(ArchiveProjectAction.java:88)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
