@@ -5,7 +5,7 @@
 const char FFT_INPUT_WIDTH                     = 16;
 const char FFT_OUTPUT_WIDTH                    = FFT_INPUT_WIDTH;
 const char FFT_CONFIG_WIDTH                    = 16;
-const char FFT_NFFT_MAX                        = 10;
+const char FFT_NFFT_MAX                        = 11;
 const int  FFT_LENGTH                          = 1 << FFT_NFFT_MAX;
 
 

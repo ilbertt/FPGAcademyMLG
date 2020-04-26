@@ -1,6 +1,6 @@
 import numpy as np
 f=open("../.tcls/stimulus.dat",'w')
-vec=np.zeros(1024)
+vec=np.zeros(2048)
 for i in range(500,600):
     vec[i]=0.5
 

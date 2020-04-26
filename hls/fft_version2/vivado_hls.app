@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="com.autoesl.autopilot.project" name="fft" top="fft_top">
   <files>
-    <file name="fft/solution1/fft_top.cpp" sc="0" tb="false" cflags="" blackbox="false"/>
-    <file name="fft/solution1/fft_top.h" sc="0" tb="false" cflags="" blackbox="false"/>
     <file name="../solution1/.tcls/fft_tb.cpp" sc="0" tb="1" cflags=""/>
     <file name="../solution1/.tcls/stimulus.dat" sc="0" tb="1" cflags=""/>
   </files>

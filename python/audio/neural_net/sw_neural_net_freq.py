@@ -36,7 +36,7 @@ t_setx=np.absolute(t_setx)
 
 t_setx=np.vstack(t_setx).astype(np.float)
 t_setx=t_setx**2								# squared because is simplier on FPGA
-t_setx=np.round(t_setx/((2**10)/t_setx.max()))  # normalized on 2^10 (10 bit on FPGA)
+t_setx=np.round(t_setx*((2**10)/t_setx.max()))  # normalized on 2^10 (10 bit on FPGA)
 
 # i=1024
 

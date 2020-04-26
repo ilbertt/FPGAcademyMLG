@@ -1,5 +1,11 @@
+/* to obtain a fft length of 2048 modify line 113 of Vivado_folder/2019.2/include/hlls_fft.h 
+	from: 
+		static const unsigned max_nfft = 10; 
+	to: 
+		static const unsigned max_nfft = 11;
+*/
 #include<stdio.h>
-#define FFT_LENGTH 1024
+#define FFT_LENGTH 2048
 void fft_top(
     float in[FFT_LENGTH],
     float out[FFT_LENGTH]);

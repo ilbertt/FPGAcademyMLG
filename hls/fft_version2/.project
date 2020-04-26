@@ -29,52 +29,42 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/gigo/FPGA_Academy/fft/.apc/.src</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/gigo/FPGA_Academy/fft/.apc/.tb</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/.tcls</location>
-		</link>
-		<link>
-			<name>source/fft_top.cpp</name>
-			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/fft_top.cpp</location>
-		</link>
-		<link>
-			<name>source/fft_top.h</name>
-			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/fft_top.h</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>testbench/fft_tb.cpp</name>
 			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/.tcls/fft_tb.cpp</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/.tcls/fft_tb.cpp</location>
 		</link>
 		<link>
 			<name>testbench/stimulus.dat</name>
 			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/.tcls/stimulus.dat</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/.tcls/stimulus.dat</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/solution1.directive</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/directives.tcl</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/gigo/FPGA_Academy/fft/solution1/script.tcl</location>
+			<location>/home/gigo/FPGA_Academy/FPGAcademyMLG/hls/fft_version2/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
