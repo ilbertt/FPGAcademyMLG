@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft_top.cpp" path="/home/gigo/FPGA_Academy/fft/solution1/fft_top.cpp"/>
+    <originFiles name="fft_top.h" path="/home/gigo/FPGA_Academy/fft/solution1/fft_top.h"/>
+  </source>
+  <testbench>
+    <originFiles name="fft_tb.cpp" path="/home/gigo/FPGA_Academy/fft/solution1/.tcls/fft_tb.cpp"/>
+    <originFiles name="stimulus.dat" path="/home/gigo/FPGA_Academy/fft/solution1/.tcls/stimulus.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

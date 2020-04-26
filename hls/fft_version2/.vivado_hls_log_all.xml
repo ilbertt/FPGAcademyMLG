@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T17:40:25.793+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T17:40:25.779+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:37:52.348+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:21:08.696+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:19:17.184+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:13:09.439+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:12:54.848+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:07:30.165+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T17:02:03.597+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T16:58:49.882+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T16:49:35.374+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T16:49:35.345+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T16:49:20.970+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T16:49:01.062+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T16:03:51.661+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T16:03:29.463+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T15:56:53.264+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:54:58.461+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:54:58.441+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:53:00.557+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:53:00.530+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:50:05.066+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:50:05.039+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:48:17.691+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:48:17.670+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:47:25.328+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:47:25.193+0200"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="fft" solutionName="solution1" date="2020-04-26T15:45:35.078+0200"/>
+        <logs message="@E Simulation failed: SIGSEGV." projectName="fft" solutionName="solution1" date="2020-04-26T15:45:35.068+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T15:41:25.787+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T15:40:06.446+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T15:39:14.239+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:48.800+0200"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'fft_top/in_r_read' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:31.130+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'fft_top/in_r_empty_n' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:31.096+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'fft_top/in_r_dout' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:31.085+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'fft_top/out' to 'fft_top/out_r' to avoid the conflict with HDL keywords or other object names." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:29.025+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'fft_top/in' to 'fft_top/in_r' to avoid the conflict with HDL keywords or other object names." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:29.014+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft&lt;config1>' to 'fft_config1_s'." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:28.990+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-657] Generating channel fft_config_data_V that flows backwards in the dataflow region." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:28.983+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::fft&lt;config1>' to 'fft&lt;config1>' (/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_fft_x_complex.h:557)" projectName="fft" solutionName="solution1" date="2020-04-26T15:38:28.963+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out' (fft/solution1/fft_top.cpp:35)." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:28.194+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in' (fft/solution1/fft_top.cpp:34)." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:27.993+0200" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] fft/solution1/fft_top.cpp:26: variable-indexed range selection may cause suboptimal QoR." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:27.788+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from fft/solution1/fft_top.cpp:1:&#xA;In file included from fft/solution1/fft_top.cpp:1:&#xA;In file included from fft/solution1/fft_top.h:2:&#xA;In file included from /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_fft.h:913:&#xA;In file included from /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_fft_x_complex.h:68:&#xA;/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_x_complex.h:43:9: warning: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature. [-W#pragma-messages]&#xA;#pragma message(&quot;hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.&quot;)&#xA;        ^&#xA;1 warning generated." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:26.133+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from fft/solution1/fft_top.cpp:1:&#xA;In file included from fft/solution1/fft_top.h:2:&#xA;In file included from /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_fft.h:912:&#xA;In file included from /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_fft_x_complex.h:68:&#xA;/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/hls_x_complex.h:43:9: warning: hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature. [-W#pragma-messages]&#xA;#pragma message(&quot;hls::x_complex library will be replaced in 2019.2 with a new implementation that does not provide automatic bit width expansion. Please avoid relying on this feature.&quot;)&#xA;        ^&#xA;1 warning generated." projectName="fft" solutionName="solution1" date="2020-04-26T15:38:10.734+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
