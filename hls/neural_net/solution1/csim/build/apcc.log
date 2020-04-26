@@ -1,0 +1,6 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'gigo' on host 'gigo-MacBookPro' (Linux_x86_64 version 4.15.0-96-generic) on Sun Apr 26 19:02:42 CEST 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/gigo/neural_net_HLS/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_gigo/38291587920562694028
+INFO: [APCC 202-1] APCC is done.
