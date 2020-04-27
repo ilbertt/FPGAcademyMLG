@@ -22,11 +22,13 @@ epochs = 1000
 fs = 4096
 
 t_setx, t_sety=np.load("/kaggle/input/dataset-2048/dataset.npy", allow_pickle=True)
+t_setx=np.vstack(t_setx).astype(np.float)
+t_sety=np.vstack(t_sety).astype(np.float)
 
 l=len(t_setx[0])
 print(l)
 
-t_setx=np.fft.fft(np.vstack(t_setx).astype(np.intc))
+t_setx=np.fft.ifft(np.vstack(t_setx).astype(np.intc))
 t_setx=t_setx[:,:int(l/2)]						# only one half of FFT
 t_setx=np.absolute(t_setx)
 
@@ -34,7 +36,6 @@ t_setx=np.absolute(t_setx)
 # freq = np.fft.fftfreq(l, d=timestep)
 # freq = freq[:int(len(freq)/2)]
 
-t_setx=np.vstack(t_setx).astype(np.float)
 t_setx=t_setx**2								# squared because is simplier on FPGA
 t_setx=np.round(t_setx*((2**10)/t_setx.max()))  # normalized on 2^10 (10 bit on FPGA)
 
@@ -52,7 +53,6 @@ t_setx=t_setx[N:]
 v_sety=t_sety[:N]
 t_sety=t_sety[N:]
 
-t_sety=np.vstack(t_sety).astype(np.float)
 
 print(len(t_setx), t_setx[0].shape)
 print(len(t_sety), t_sety[0].shape)

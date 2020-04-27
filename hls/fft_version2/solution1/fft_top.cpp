@@ -25,7 +25,7 @@ void dummy_proc_be(
 		#pragma HLS PIPELINE
     	re=in[i].real().to_float();
     	im=in[i].imag().to_float();
-        out[i] = re*re+im*im;
+        out[i] = (re*re+im*im)*1048576; //multiply for (2**10)**2 to obtain unscaled fft
     }
 }
 
