@@ -54,11 +54,13 @@ def test(keyword, f, threshold, title):
 	plt.title(title)
 	plt.grid()
 	# plot fft
-	KEY = np.fft.fft(keyword)
-	KEY = KEY[:int(len(KEY)/2)]
+	KEY = np.fft.ifft(keyword)
+	#KEY = KEY[:int(len(KEY)/2)]
 	timestep = 1/f
 	freq = np.fft.fftfreq(samples, d=timestep)
-	freq = freq[:int(len(freq)/2)]
+	#print(freq)
+	#freq = freq[:int(len(freq)/2)]
+	print(freq)
 	plt.subplot(212)
 	plt.xlabel("frequency [Hz]")
 	plt.ylabel("spectral density")

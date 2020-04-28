@@ -38,7 +38,7 @@ functions.test(keyword, f, threshold, "original")
 
 # test "keyword" after each function
 keyword = functions.resample(keyword, f, fs)	# resample keyword to 44100 hz
-functions.test(keyword, fs, threshold, "res_44000")
+functions.test(keyword, fs, threshold, "resampling_44100")
 
 keyword = functions.normalize(keyword, maxScale) # normalize
 functions.test(keyword, fs, threshold, "normalized")
@@ -47,4 +47,4 @@ keyword = functions.threshold_resize(keyword, threshold, length, goBackSize)	# k
 functions.test(keyword, fs, threshold, "threshold")
 
 keyword = functions.resample(keyword, fs, f_final)		# resample keyword to 11025 hz
-functions.test(keyword, fs/4, threshold, "res_11000")
+functions.test(keyword, f_final, threshold, "resampling_4096")
