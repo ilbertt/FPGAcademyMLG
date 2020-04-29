@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="kernel.cpp" path="/home/gigo/neural_net_HLS/solution1/kernel.cpp"/>
+    <originFiles name="mylib.c" path="/home/gigo/neural_net_HLS/solution1/mylib.c"/>
+    <originFiles name="mylib.h" path="/home/gigo/neural_net_HLS/solution1/mylib.h"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/gigo/neural_net_HLS/solution1/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

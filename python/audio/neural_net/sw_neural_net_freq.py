@@ -17,11 +17,11 @@ from keras import backend as K
 from keras import models
 
 N = 100	# lenght of validation set
-epochs = 1000
+epochs = 100
 
 fs = 4096
 
-t_setx, t_sety=np.load("/kaggle/input/dataset-2048/dataset.npy", allow_pickle=True)
+t_setx, t_sety=np.load("dataset.npy", allow_pickle=True)
 t_setx=np.vstack(t_setx).astype(np.float)
 t_sety=np.vstack(t_sety).astype(np.float)
 
@@ -78,8 +78,8 @@ v_sety = np.asarray(v_sety).astype(np.float)
 results = model.evaluate(v_setx, v_sety, batch_size=86)
 print('test loss, test acc:', results)
 
-np.save("tensorflow_files/weights_freq", np.array(model.get_weights()))
-model.save("tensorflow_files/model_freq.h5") #to open the model use: model=keras.models.load_model("model.h5")
+#np.save("tensorflow_files/weights_freq", np.array(model.get_weights()))
+#model.save("tensorflow_files/model_freq.h5") #to open the model use: model=keras.models.load_model("model.h5")
 
 for i in range(0,len(v_setx)):	# predict on v_set array
 	print(model.predict([[v_setx[i]]]), v_sety[i])
