@@ -1,0 +1,34 @@
+obj/fft_top.o: ../../fft_top.cpp ../../fft_top.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_fixed.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_common.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_decl.h \
+ /home/eulero/vivado/Vivado/2019.2/include/etc/ap_private.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_half.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_fpo.h \
+ /home/eulero/vivado/Vivado/2019.2/include/floating_point_v7_0_bitacc_cmodel.h \
+ /home/eulero/vivado/Vivado/2019.2/include/gmp.h \
+ /home/eulero/vivado/Vivado/2019.2/include/mpfr.h \
+ /home/eulero/vivado/Vivado/2019.2/include/gmp.h \
+ /home/eulero/vivado/Vivado/2019.2/include/mpfr.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_decl.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_fixed_base.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_int.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_int_base.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_int_ref.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_int_special.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_fixed_ref.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_fixed_special.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_fft.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_int.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_stream.h \
+ /home/eulero/vivado/Vivado/2019.2/include/fft/xfft_v9_1_bitacc_cmodel.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_fft_x_complex.h \
+ /home/eulero/vivado/Vivado/2019.2/include/hls_x_complex.h \
+ /home/eulero/vivado/Vivado/2019.2/include/ap_fixed.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_defines.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/std_complex_utils.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_defines.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_traits.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_utils.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_defines.h \
+ /home/eulero/vivado/Vivado/2019.2/include/utils/x_hls_traits.h

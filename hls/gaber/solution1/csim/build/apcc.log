@@ -1,0 +1,6 @@
+INFO: [HLS 200-10] Running '/home/eulero/vivado/Vivado/2019.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'eulero' on host 'luca-elos' (Linux_x86_64 version 5.3.0-46-generic) on Fri May 01 23:23:57 CEST 2020
+INFO: [HLS 200-10] On os elementary OS 5.1.3 Hera
+INFO: [HLS 200-10] In directory '/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_eulero/84651588368237234290
+INFO: [APCC 202-1] APCC is done.

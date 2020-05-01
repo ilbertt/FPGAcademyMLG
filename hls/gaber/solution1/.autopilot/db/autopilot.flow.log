@@ -1,0 +1,224 @@
+INFO-FLOW: Workspace /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1 opened at Fri May 01 23:17:57 CEST 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+Execute     set_part xc7k70tfbv676-1 
+Execute       ap_part_info -name xc7k70tfbv676-1 -data single -quiet 
+Command       ap_part_info done; 1.54 sec.
+Execute       ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute       add_library xilinx/kintex7/kintex7:xc7k70t:-fbv676:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.13 sec.
+Command         ap_source done; 0.14 sec.
+Execute         ap_part_info -data single -name xc7k70t-fbv676-1 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data resources 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 10250} {LUT 41000} {FF 82000} {DSP48E 240} {BRAM 270} {URAM 0} 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.22 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+Execute       ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.89 sec.
+Execute     ap_part_info -data single -name xc7k70tfbv676-1 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data resources 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 10250} {LUT 41000} {FF 82000} {DSP48E 240} {BRAM 270} {URAM 0} 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.97 sec.
+Execute   csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/testbench.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/testbench.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/fft_version2/solution1/fft_top.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/fft_version2/solution1/fft_top.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/fft_version2/solution1/fft_top.h 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/fft_version2/solution1/fft_top.h 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/kernel.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/kernel.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/mylib.c 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/mylib.c 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/mylib.h 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/mylib.h 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 2.42 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 23.62 sec.
+Command ap_source done; 25.6 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1 opened at Fri May 01 23:23:43 CEST 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/Kintex-7/Kintex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'.
+Execute     set_part xc7k70tfbv676-1 
+Execute       ap_part_info -name xc7k70tfbv676-1 -data single -quiet 
+Command       ap_part_info done; 1.32 sec.
+Execute       ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute       add_library xilinx/kintex7/kintex7:xc7k70t:-fbv676:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/dsp48e1.hlp 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7.gen 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.11 sec.
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.15 sec.
+Command         ap_source done; 0.15 sec.
+Execute         ap_part_info -data single -name xc7k70t-fbv676-1 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data resources 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 10250} {LUT 41000} {FF 82000} {DSP48E 240} {BRAM 270} {URAM 0} 
+Execute         ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.21 sec.
+Execute       add_library xilinx/kintex7/kintex7_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7_fpv6 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/kintex7/kintex7_fpv6.gen 
+Execute           source /home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7k70t-fbv676-1'
+Execute       ap_part_info -name xc7k70t-fbv676-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.68 sec.
+Execute     ap_part_info -data single -name xc7k70tfbv676-1 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data resources 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 10250} {LUT 41000} {FF 82000} {DSP48E 240} {BRAM 270} {URAM 0} 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 1.71 sec.
+Execute   csim_design -clean -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/testbench.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/testbench.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.h 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.h 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/kernel.cpp 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/kernel.cpp 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.c 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.c 
+Execute     is_encrypted /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.h 
+Execute     is_xip /home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.h 
+Execute     ap_part_info -name xc7k70tfbv676-1 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 1.76 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 22.59 sec.
+Command ap_source done; 24.31 sec.
+Execute cleanup_all 

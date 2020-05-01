@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'." projectName="gaber" solutionName="solution1" date="2020-05-01T23:23:44.592+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/Kintex-7/Kintex-7.lib'." projectName="gaber" solutionName="solution1" date="2020-05-01T23:23:43.044+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value&#xA;0: 1.000000&#xA;1: 0.000000&#xA;2: 1.000000&#xA;3: 0.000000&#xA;4: 0.810419&#xA;5: 0.000000&#xA;6: 0.000000&#xA;7: 0.000000&#xA;8: 0.275620&#xA;9: 0.000000&#xA;10: 1.000000&#xA;11: 0.000000&#xA;12: 0.000000&#xA;13: 0.988469&#xA;14: 1.000000&#xA;15: 1.000000&#xA;16: 0.000000&#xA;17: 0.080955&#xA;18: 0.000000&#xA;19: 0.000000&#xA;20: 0.273468&#xA;21: 0.000000&#xA;22: 0.000000&#xA;23: 0.000000&#xA;24: 0.000000&#xA;25: 0.000000&#xA;26: 0.000000&#xA;27: 0.000000&#xA;28: 1.000000&#xA;29: 0.000000&#xA;30: 0.000000&#xA;31: 1.000000&#xA;32: 1.000000&#xA;33: 1.000000&#xA;34: 0.000000&#xA;35: 0.000000&#xA;36: 0.000000&#xA;37: 0.985640&#xA;38: 0.000000&#xA;39: 0.000000&#xA;40: 0.000000&#xA;41: 0.000000&#xA;42: 0.999637&#xA;43: 0.000000&#xA;44: 1.000000&#xA;45: 1.000000&#xA;46: 1.000000&#xA;47: 0.000000&#xA;48: 1.000000&#xA;49: 0.000000&#xA;50: 0.000000&#xA;51: 0.000000&#xA;52: 1.000000&#xA;53: 1.000000&#xA;54: 0.000000&#xA;55: 1.000000&#xA;56: 1.000000&#xA;57: 0.055184&#xA;58: 0.000000&#xA;59: 0.000000&#xA;60: 1.000000&#xA;61: 0.000000&#xA;62: 0.000000&#xA;63: 0.000000&#xA;64: 0.000000&#xA;65: 0.000000&#xA;66: 1.000000&#xA;67: 1.000000&#xA;68: 0.000000&#xA;69: 0.000000&#xA;70: 0.000000&#xA;71: 0.000000&#xA;72: 0.000000&#xA;73: 0.000000&#xA;74: 0.000000&#xA;75: 0.000000&#xA;76: 1.000000&#xA;77: 0.000000&#xA;78: 0.670839&#xA;79: 0.000000&#xA;80: 0.000000&#xA;81: 0.000000&#xA;82: 0.000000&#xA;83: 0.000000&#xA;84: 0.000000&#xA;85: 0.000000&#xA;86: 1.000000&#xA;87: 0.813786&#xA;88: 1.000000&#xA;89: 0.000000&#xA;90: 0.000000&#xA;91: 0.894872&#xA;92: 0.000000&#xA;93: 0.000000&#xA;94: 0.000000&#xA;95: 1.000000&#xA;96: 1.000000&#xA;97: 0.000000&#xA;98: 1.000000&#xA;99: 0.000000" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.810+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.785+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.765+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.747+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.728+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.706+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.686+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.666+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.641+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.630+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.598+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.569+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.544+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.515+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.501+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.469+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.442+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.417+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.391+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.369+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.344+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.323+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.296+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.282+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.266+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.227+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.200+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.177+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.149+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.131+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.104+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.092+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.062+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.046+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:22.020+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.996+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.975+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.948+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.919+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.899+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.872+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.839+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.809+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.794+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.762+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.730+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.707+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.694+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.652+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.628+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.603+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.579+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.556+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.516+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.485+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.460+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.437+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.416+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.338+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.313+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.287+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.266+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.245+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.217+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.192+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.163+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.139+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.114+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.093+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.072+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.054+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.042+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:21.004+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.977+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.952+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.929+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.906+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.885+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.861+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.835+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.810+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.789+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.764+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.749+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.733+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.711+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.687+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.642+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.623+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.603+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.578+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.575+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.571+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.568+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.565+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.562+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.558+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.555+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.551+0200" type="Warning"/>
+        <logs message="WARNING: assign NaN to fixed point value" projectName="gaber" solutionName="solution1" date="2020-05-01T23:18:20.407+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Kintex-7/Kintex-7'." projectName="gaber" solutionName="solution1" date="2020-05-01T23:17:59.060+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/home/eulero/vivado/Vivado/2019.2/common/technology/xilinx/Kintex-7/Kintex-7.lib'." projectName="gaber" solutionName="solution1" date="2020-05-01T23:17:57.280+0200" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

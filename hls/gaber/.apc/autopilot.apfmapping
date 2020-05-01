@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fft_top.cpp" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.cpp"/>
+    <originFiles name="fft_top.h" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/fft_top.h"/>
+    <originFiles name="kernel.cpp" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/kernel.cpp"/>
+    <originFiles name="mylib.c" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.c"/>
+    <originFiles name="mylib.h" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/gaber/solution1/mylib.h"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/eulero/onedrivepers/fpga/FPGAAcademy/FPGAcademyMLG/hls/neural_net/solution1/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
