@@ -21,7 +21,7 @@ epochs = 100
 
 fs = 4096
 
-t_setx, t_sety=np.load("dataset.npy", allow_pickle=True)
+t_setx, t_sety=np.load("../dataset/arrays/dataset.npy", allow_pickle=True)
 t_setx=np.vstack(t_setx).astype(np.float)
 t_sety=np.vstack(t_sety).astype(np.float)
 
@@ -29,7 +29,7 @@ l=len(t_setx[0])
 print(l)
 
 t_setx=np.fft.ifft(np.vstack(t_setx).astype(np.intc))
-t_setx=t_setx[:,:int(l/2)]						# only one half of FFT
+t_setx=t_setx[:,:int(l/4)]						# only one fourth of FFT
 t_setx=np.absolute(t_setx)
 
 # timestep = 1/fs
@@ -37,7 +37,7 @@ t_setx=np.absolute(t_setx)
 # freq = freq[:int(len(freq)/2)]
 
 t_setx=t_setx**2								# squared because is simplier on FPGA
-t_setx=np.round(t_setx*((2**10)/t_setx.max()))  # normalized on 2^10 (10 bit on FPGA)
+t_setx=np.round(t_setx*((2**9)/t_setx.max()))  # normalized on 2^10 (10 bit on FPGA) equivalent to 9 unsigned bit 
 
 # i=1024
 
@@ -73,13 +73,13 @@ model.summary()
 model.compile(optimizer=keras.optimizers.SGD(lr=0.3),loss="binary_crossentropy",metrics=['binary_accuracy'])
 model.fit(x=t_setx, y=t_sety,validation_split=0.2, epochs=epochs, batch_size=32)
 
+np.save("../model/weights_freq", np.array(model.get_weights()))
+model.save("../model/model_freq.h5") #to open the model use: model=keras.models.load_model("model.h5")
+
 v_setx = np.asarray(v_setx).astype(np.float)
 v_sety = np.asarray(v_sety).astype(np.float)
 results = model.evaluate(v_setx, v_sety, batch_size=86)
 print('test loss, test acc:', results)
-
-#np.save("tensorflow_files/weights_freq", np.array(model.get_weights()))
-#model.save("tensorflow_files/model_freq.h5") #to open the model use: model=keras.models.load_model("model.h5")
 
 for i in range(0,len(v_setx)):	# predict on v_set array
 	print(model.predict([[v_setx[i]]]), v_sety[i])

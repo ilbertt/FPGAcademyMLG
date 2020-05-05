@@ -1,0 +1,66 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "and2_0": "",
+      "kernel_0": ""
+    },
+    "ports": {
+      "res": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "and2_0": {
+        "vlnv": "xilinx.com:module_ref:and2:1.0",
+        "xci_name": "design_1_and2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "and2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "op1": {
+            "direction": "I"
+          },
+          "op2": {
+            "direction": "I"
+          },
+          "res": {
+            "direction": "O"
+          }
+        }
+      },
+      "kernel_0": {
+        "vlnv": "TeamMLG:hls:kernel:1.0",
+        "xci_name": "design_1_kernel_0_4"
+      }
+    },
+    "nets": {
+      "and2_0_res": {
+        "ports": [
+          "and2_0/res",
+          "res"
+        ]
+      },
+      "kernel_0_res_ap_vld": {
+        "ports": [
+          "kernel_0/res_ap_vld",
+          "and2_0/op1"
+        ]
+      },
+      "kernel_0_res": {
+        "ports": [
+          "kernel_0/res",
+          "and2_0/op2"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fft_top'" level="0">
+<item name = "Date">Mon May  4 11:14:25 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">neural_net_HLS</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.750 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">6278, 6278, 62.780 us, 62.780 us, 6279, 6279, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dummy_proc_be_fu_146">dummy_proc_be, 531, 531, 5.310 us, 5.310 us, 531, 531, none</column>
+<column name="grp_dummy_proc_fe_fu_153">dummy_proc_fe, 2064, 2064, 20.640 us, 20.640 us, 2064, 2064, none</column>
+<column name="grp_fft_config1_s_fu_161">fft_config1_s, 6278, 6278, 62.780 us, 62.780 us, 6278, 6278, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

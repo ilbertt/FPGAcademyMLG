@@ -1,0 +1,421 @@
+
+
+================================================================
+== Vivado HLS Report for 'dummy_proc_be'
+================================================================
+* Date:           Mon May  4 11:14:25 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        neural_net_HLS
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.657 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      531|      531| 5.310 us | 5.310 us |  531|  531|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      529|      529|        19|          1|          1|   512|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 19
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 19, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 21 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 2 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_r, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str70, i32 0, i32 0, [1 x i8]* @p_str71, [1 x i8]* @p_str72, [1 x i8]* @p_str73, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str74, [1 x i8]* @p_str75)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.66ns)   --->   "br label %1" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 23 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.12>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%i_0 = phi i10 [ 0, %0 ], [ %i, %hls_label_1 ]"   --->   Operation 24 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.70ns)   --->   "%icmp_ln25 = icmp eq i10 %i_0, -512" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 25 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 26 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (2.12ns)   --->   "%i = add i10 %i_0, 1" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 27 'add' 'i' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %icmp_ln25, label %2, label %hls_label_1" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 28 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.34>
+ST_3 : Operation 29 [1/1] (3.90ns)   --->   "%in_read = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_r)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 29 'read' 'in_read' <Predicate = (!icmp_ln25)> <Delay = 3.90> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_V_6 = trunc i32 %in_read to i16" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 30 'trunc' 'tmp_V_6' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (2.38ns)   --->   "%icmp_ln935 = icmp eq i16 %tmp_V_6, 0" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 31 'icmp' 'icmp_ln935' <Predicate = (!icmp_ln25)> <Delay = 2.38> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_16 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %in_read, i32 15)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 32 'bitselect' 'p_Result_16' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (2.14ns)   --->   "%tmp_V = sub i16 0, %tmp_V_6" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 33 'sub' 'tmp_V' <Predicate = (!icmp_ln25)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (1.29ns)   --->   "%tmp_V_7 = select i1 %p_Result_16, i16 %tmp_V, i16 %tmp_V_6" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 34 'select' 'tmp_V_7' <Predicate = (!icmp_ln25)> <Delay = 1.29> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%p_Result_s = call i16 @llvm.part.select.i16(i16 %tmp_V_7, i32 15, i32 0) nounwind" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 35 'partselect' 'p_Result_s' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_V_8 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %in_read, i32 16, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 36 'partselect' 'tmp_V_8' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (2.38ns)   --->   "%icmp_ln935_1 = icmp eq i16 %tmp_V_8, 0" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 37 'icmp' 'icmp_ln935_1' <Predicate = (!icmp_ln25)> <Delay = 2.38> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%p_Result_19 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %in_read, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 38 'bitselect' 'p_Result_19' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (2.14ns)   --->   "%tmp_V_4 = sub i16 0, %tmp_V_8" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 39 'sub' 'tmp_V_4' <Predicate = (!icmp_ln25)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (1.29ns)   --->   "%tmp_V_9 = select i1 %p_Result_19, i16 %tmp_V_4, i16 %tmp_V_8" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 40 'select' 'tmp_V_9' <Predicate = (!icmp_ln25)> <Delay = 1.29> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%p_Result_11 = call i16 @llvm.part.select.i16(i16 %tmp_V_9, i32 15, i32 0) nounwind" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 41 'partselect' 'p_Result_11' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 8.65>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%p_Result_17 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 -1, i16 %p_Result_s)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 42 'bitconcatenate' 'p_Result_17' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (3.25ns)   --->   "%l = call i32 @llvm.cttz.i32(i32 %p_Result_17, i1 true) nounwind" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 43 'cttz' 'l' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 3.25> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 44 [1/1] (2.70ns)   --->   "%sub_ln944 = sub nsw i32 16, %l" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 44 'sub' 'sub_ln944' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln944 = trunc i32 %sub_ln944 to i16" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 45 'trunc' 'trunc_ln944' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (2.70ns)   --->   "%lsb_index = add nsw i32 -24, %sub_ln944" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 46 'add' 'lsb_index' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_6 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index, i32 1, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 47 'partselect' 'tmp_6' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln947 = trunc i32 %sub_ln944 to i5" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 48 'trunc' 'trunc_ln947' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (1.86ns)   --->   "%sub_ln947 = sub i5 9, %trunc_ln947" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 49 'sub' 'sub_ln947' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln943 = trunc i32 %l to i8" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 50 'trunc' 'trunc_ln943' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%p_Result_20 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 -1, i16 %p_Result_11)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 51 'bitconcatenate' 'p_Result_20' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (3.25ns)   --->   "%l_1 = call i32 @llvm.cttz.i32(i32 %p_Result_20, i1 true) nounwind" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 52 'cttz' 'l_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 3.25> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 3.25> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (2.70ns)   --->   "%sub_ln944_1 = sub nsw i32 16, %l_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 53 'sub' 'sub_ln944_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln944_1 = trunc i32 %sub_ln944_1 to i16" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 54 'trunc' 'trunc_ln944_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (2.70ns)   --->   "%lsb_index_1 = add nsw i32 -24, %sub_ln944_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 55 'add' 'lsb_index_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_10 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index_1, i32 1, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 56 'partselect' 'tmp_10' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln947_1 = trunc i32 %sub_ln944_1 to i5" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 57 'trunc' 'trunc_ln947_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (1.86ns)   --->   "%sub_ln947_1 = sub i5 9, %trunc_ln947_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 58 'sub' 'sub_ln947_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln943_1 = trunc i32 %l_1 to i8" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 59 'trunc' 'trunc_ln943_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 7.62>
+ST_5 : Operation 60 [1/1] (2.43ns)   --->   "%icmp_ln947 = icmp sgt i31 %tmp_6, 0" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 60 'icmp' 'icmp_ln947' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%zext_ln947 = zext i5 %sub_ln947 to i16" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 61 'zext' 'zext_ln947' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%lshr_ln947 = lshr i16 -1, %zext_ln947" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 62 'lshr' 'lshr_ln947' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%p_Result_7 = and i16 %tmp_V_7, %lshr_ln947" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 63 'and' 'p_Result_7' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (2.55ns) (out node of the LUT)   --->   "%icmp_ln947_1 = icmp ne i16 %p_Result_7, 0" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 64 'icmp' 'icmp_ln947_1' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%a = and i1 %icmp_ln947, %icmp_ln947_1" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 65 'and' 'a' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 66 'bitselect' 'tmp_7' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%xor_ln949 = xor i1 %tmp_7, true" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 67 'xor' 'xor_ln949' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [1/1] (2.14ns)   --->   "%add_ln949 = add i16 -24, %trunc_ln944" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 68 'add' 'add_ln949' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%p_Result_8 = call i1 @_ssdm_op_BitSelect.i1.i16.i16(i16 %tmp_V_7, i16 %add_ln949)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 69 'bitselect' 'p_Result_8' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%and_ln949 = and i1 %p_Result_8, %xor_ln949" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 70 'and' 'and_ln949' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%or_ln949_2 = or i1 %and_ln949, %a" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 71 'or' 'or_ln949_2' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 72 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949_2)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 72 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.97>
+ST_5 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m = zext i16 %tmp_V_7 to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 73 'zext' 'm' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln957_1 = zext i16 %tmp_V_7 to i32" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 74 'zext' 'zext_ln957_1' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (2.43ns)   --->   "%icmp_ln958 = icmp sgt i32 %lsb_index, 0" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 75 'icmp' 'icmp_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 76 [1/1] (2.70ns)   --->   "%add_ln958 = add nsw i32 -25, %sub_ln944" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 76 'add' 'add_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%lshr_ln958 = lshr i32 %zext_ln957_1, %add_ln958" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 77 'lshr' 'lshr_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958 = zext i32 %lshr_ln958 to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 78 'zext' 'zext_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (2.70ns)   --->   "%sub_ln958 = sub i32 25, %sub_ln944" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 79 'sub' 'sub_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958_1 = zext i32 %sub_ln958 to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 80 'zext' 'zext_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%shl_ln958 = shl i64 %m, %zext_ln958_1" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 81 'shl' 'shl_ln958' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m_1 = select i1 %icmp_ln958, i64 %zext_ln958, i64 %shl_ln958" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 82 'select' 'm_1' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln961 = zext i32 %or_ln to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 83 'zext' 'zext_ln961' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (4.08ns) (out node of the LUT)   --->   "%m_2 = add i64 %zext_ln961, %m_1" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 84 'add' 'm_2' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 4.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%m_s = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_2, i32 1, i32 63)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 85 'partselect' 'm_s' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_2, i32 25)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 86 'bitselect' 'tmp_8' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (2.43ns)   --->   "%icmp_ln947_2 = icmp sgt i31 %tmp_10, 0" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 87 'icmp' 'icmp_ln947_2' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%zext_ln947_1 = zext i5 %sub_ln947_1 to i16" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 88 'zext' 'zext_ln947_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%lshr_ln947_1 = lshr i16 -1, %zext_ln947_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 89 'lshr' 'lshr_ln947_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%p_Result_13 = and i16 %tmp_V_9, %lshr_ln947_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 90 'and' 'p_Result_13' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [1/1] (2.55ns) (out node of the LUT)   --->   "%icmp_ln947_3 = icmp ne i16 %p_Result_13, 0" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 91 'icmp' 'icmp_ln947_3' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%a_1 = and i1 %icmp_ln947_2, %icmp_ln947_3" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 92 'and' 'a_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index_1, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 93 'bitselect' 'tmp_11' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%xor_ln949_1 = xor i1 %tmp_11, true" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 94 'xor' 'xor_ln949_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/1] (2.14ns)   --->   "%add_ln949_1 = add i16 -24, %trunc_ln944_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 95 'add' 'add_ln949_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%p_Result_14 = call i1 @_ssdm_op_BitSelect.i1.i16.i16(i16 %tmp_V_9, i16 %add_ln949_1)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 96 'bitselect' 'p_Result_14' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%and_ln949_1 = and i1 %p_Result_14, %xor_ln949_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 97 'and' 'and_ln949_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_1)   --->   "%or_ln949 = or i1 %and_ln949_1, %a_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 98 'or' 'or_ln949' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln949_1 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 99 'bitconcatenate' 'or_ln949_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.97>
+ST_5 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%m_9 = zext i16 %tmp_V_9 to i64" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 100 'zext' 'm_9' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%zext_ln957_2 = zext i16 %tmp_V_9 to i32" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 101 'zext' 'zext_ln957_2' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 102 [1/1] (2.43ns)   --->   "%icmp_ln958_1 = icmp sgt i32 %lsb_index_1, 0" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 102 'icmp' 'icmp_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 103 [1/1] (2.70ns)   --->   "%add_ln958_1 = add nsw i32 -25, %sub_ln944_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 103 'add' 'add_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%lshr_ln958_1 = lshr i32 %zext_ln957_2, %add_ln958_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 104 'lshr' 'lshr_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%zext_ln958_2 = zext i32 %lshr_ln958_1 to i64" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 105 'zext' 'zext_ln958_2' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (2.70ns)   --->   "%sub_ln958_1 = sub i32 25, %sub_ln944_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 106 'sub' 'sub_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%zext_ln958_3 = zext i32 %sub_ln958_1 to i64" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 107 'zext' 'zext_ln958_3' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%shl_ln958_1 = shl i64 %m_9, %zext_ln958_3" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 108 'shl' 'shl_ln958_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 4.08> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%m_10 = select i1 %icmp_ln958_1, i64 %zext_ln958_2, i64 %shl_ln958_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 109 'select' 'm_10' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node m_12)   --->   "%zext_ln961_1 = zext i32 %or_ln949_1 to i64" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 110 'zext' 'zext_ln961_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 111 [1/1] (4.08ns) (out node of the LUT)   --->   "%m_12 = add i64 %zext_ln961_1, %m_10" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 111 'add' 'm_12' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 4.08> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%m_3 = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_12, i32 1, i32 63)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 112 'partselect' 'm_3' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_12, i32 25)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 113 'bitselect' 'tmp_12' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 5.51>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%m_15 = zext i63 %m_s to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 114 'zext' 'm_15' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (1.04ns)   --->   "%select_ln964 = select i1 %tmp_8, i8 127, i8 126" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 115 'select' 'select_ln964' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 116 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964 = sub i8 1, %trunc_ln943" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 116 'sub' 'sub_ln964' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 117 [1/1] (3.67ns) (root node of TernaryAdder)   --->   "%add_ln964 = add i8 %sub_ln964, %select_ln964" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 117 'add' 'add_ln964' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 3.67> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_20 = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_16, i8 %add_ln964)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 118 'bitconcatenate' 'tmp_20' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_6 : Operation 119 [1/1] (0.00ns)   --->   "%p_Result_18 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_15, i9 %tmp_20, i32 23, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 119 'partset' 'p_Result_18' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%trunc_ln738 = trunc i64 %p_Result_18 to i32" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 120 'trunc' 'trunc_ln738' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_6 : Operation 121 [1/1] (0.00ns)   --->   "%bitcast_ln739 = bitcast i32 %trunc_ln738 to float" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 121 'bitcast' 'bitcast_ln739' <Predicate = (!icmp_ln25 & !icmp_ln935)> <Delay = 0.00>
+ST_6 : Operation 122 [1/1] (0.79ns)   --->   "%re = select i1 %icmp_ln935, float 0.000000e+00, float %bitcast_ln739" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 122 'select' 're' <Predicate = (!icmp_ln25)> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 123 [1/1] (0.00ns)   --->   "%m_16 = zext i63 %m_3 to i64" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 123 'zext' 'm_16' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_6 : Operation 124 [1/1] (1.04ns)   --->   "%select_ln964_1 = select i1 %tmp_12, i8 127, i8 126" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 124 'select' 'select_ln964_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 1.04> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 125 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964_1 = sub i8 1, %trunc_ln943_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 125 'sub' 'sub_ln964_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 126 [1/1] (3.67ns) (root node of TernaryAdder)   --->   "%add_ln964_1 = add i8 %sub_ln964_1, %select_ln964_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 126 'add' 'add_ln964_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 3.67> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.83> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_21 = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_19, i8 %add_ln964_1)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 127 'bitconcatenate' 'tmp_21' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (0.00ns)   --->   "%p_Result_21 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_16, i9 %tmp_21, i32 23, i32 31)" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 128 'partset' 'p_Result_21' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln738_1 = trunc i64 %p_Result_21 to i32" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 129 'trunc' 'trunc_ln738_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%bitcast_ln739_1 = bitcast i32 %trunc_ln738_1 to float" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 130 'bitcast' 'bitcast_ln739_1' <Predicate = (!icmp_ln25 & !icmp_ln935_1)> <Delay = 0.00>
+ST_6 : Operation 131 [1/1] (0.79ns)   --->   "%im = select i1 %icmp_ln935_1, float 0.000000e+00, float %bitcast_ln739_1" [neural_net_HLS/solution1/fft_top.cpp:28]   --->   Operation 131 'select' 'im' <Predicate = (!icmp_ln25)> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 5.78>
+ST_7 : Operation 132 [4/4] (5.78ns)   --->   "%tmp = fmul float %re, %re" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 132 'fmul' 'tmp' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 133 [4/4] (5.78ns)   --->   "%tmp_s = fmul float %im, %im" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 133 'fmul' 'tmp_s' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.78>
+ST_8 : Operation 134 [3/4] (5.78ns)   --->   "%tmp = fmul float %re, %re" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 134 'fmul' 'tmp' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 135 [3/4] (5.78ns)   --->   "%tmp_s = fmul float %im, %im" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 135 'fmul' 'tmp_s' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.78>
+ST_9 : Operation 136 [2/4] (5.78ns)   --->   "%tmp = fmul float %re, %re" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 136 'fmul' 'tmp' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 137 [2/4] (5.78ns)   --->   "%tmp_s = fmul float %im, %im" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 137 'fmul' 'tmp_s' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 5.78>
+ST_10 : Operation 138 [1/4] (5.78ns)   --->   "%tmp = fmul float %re, %re" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 138 'fmul' 'tmp' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 139 [1/4] (5.78ns)   --->   "%tmp_s = fmul float %im, %im" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 139 'fmul' 'tmp_s' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 8.26>
+ST_11 : Operation 140 [5/5] (8.26ns)   --->   "%tmp_14 = fadd float %tmp, %tmp_s" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 140 'fadd' 'tmp_14' <Predicate = (!icmp_ln25)> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 8.26>
+ST_12 : Operation 141 [4/5] (8.26ns)   --->   "%tmp_14 = fadd float %tmp, %tmp_s" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 141 'fadd' 'tmp_14' <Predicate = (!icmp_ln25)> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 8.26>
+ST_13 : Operation 142 [3/5] (8.26ns)   --->   "%tmp_14 = fadd float %tmp, %tmp_s" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 142 'fadd' 'tmp_14' <Predicate = (!icmp_ln25)> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 8.26>
+ST_14 : Operation 143 [2/5] (8.26ns)   --->   "%tmp_14 = fadd float %tmp, %tmp_s" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 143 'fadd' 'tmp_14' <Predicate = (!icmp_ln25)> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 8.26>
+ST_15 : Operation 144 [1/5] (8.26ns)   --->   "%tmp_14 = fadd float %tmp, %tmp_s" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 144 'fadd' 'tmp_14' <Predicate = (!icmp_ln25)> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 5.78>
+ST_16 : Operation 145 [4/4] (5.78ns)   --->   "%tmp_15 = fmul float %tmp_14, 2.621440e+05" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 145 'fmul' 'tmp_15' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 5.78>
+ST_17 : Operation 146 [3/4] (5.78ns)   --->   "%tmp_15 = fmul float %tmp_14, 2.621440e+05" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 146 'fmul' 'tmp_15' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 5.78>
+ST_18 : Operation 147 [2/4] (5.78ns)   --->   "%tmp_15 = fmul float %tmp_14, 2.621440e+05" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 147 'fmul' 'tmp_15' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 5.78>
+ST_19 : Operation 148 [1/4] (5.78ns)   --->   "%tmp_15 = fmul float %tmp_14, 2.621440e+05" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 148 'fmul' 'tmp_15' <Predicate = (!icmp_ln25)> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.25>
+ST_20 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_19 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str211)" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 149 'specregionbegin' 'tmp_19' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_20 : Operation 150 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str110) nounwind" [neural_net_HLS/solution1/fft_top.cpp:26]   --->   Operation 150 'specpipeline' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_20 : Operation 151 [1/1] (0.00ns)   --->   "%zext_ln27 = zext i10 %i_0 to i64" [neural_net_HLS/solution1/fft_top.cpp:27]   --->   Operation 151 'zext' 'zext_ln27' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_20 : Operation 152 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [512 x float]* %out_r, i64 0, i64 %zext_ln27" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 152 'getelementptr' 'out_addr' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_20 : Operation 153 [1/1] (3.25ns)   --->   "store float %tmp_15, float* %out_addr, align 4" [neural_net_HLS/solution1/fft_top.cpp:29]   --->   Operation 153 'store' <Predicate = (!icmp_ln25)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_20 : Operation 154 [1/1] (0.00ns)   --->   "%empty_42 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str211, i32 %tmp_19)" [neural_net_HLS/solution1/fft_top.cpp:30]   --->   Operation 154 'specregionend' 'empty_42' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+ST_20 : Operation 155 [1/1] (0.00ns)   --->   "br label %1" [neural_net_HLS/solution1/fft_top.cpp:25]   --->   Operation 155 'br' <Predicate = (!icmp_ln25)> <Delay = 0.00>
+
+State 21 <SV = 2> <Delay = 0.00>
+ST_21 : Operation 156 [1/1] (0.00ns)   --->   "ret void" [neural_net_HLS/solution1/fft_top.cpp:31]   --->   Operation 156 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/fft_top.cpp:25) [6]  (1.66 ns)
+
+ <State 2>: 2.12ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/fft_top.cpp:25) [6]  (0 ns)
+	'add' operation ('i', neural_net_HLS/solution1/fft_top.cpp:25) [9]  (2.12 ns)
+
+ <State 3>: 7.35ns
+The critical path consists of the following:
+	fifo read on port 'in_r' (neural_net_HLS/solution1/fft_top.cpp:27) [15]  (3.91 ns)
+	'sub' operation ('tmp.V', neural_net_HLS/solution1/fft_top.cpp:27) [19]  (2.15 ns)
+	'select' operation ('tmp.V', neural_net_HLS/solution1/fft_top.cpp:27) [20]  (1.29 ns)
+
+ <State 4>: 8.66ns
+The critical path consists of the following:
+	'cttz' operation ('l', neural_net_HLS/solution1/fft_top.cpp:27) [23]  (3.25 ns)
+	'sub' operation ('sub_ln944', neural_net_HLS/solution1/fft_top.cpp:27) [24]  (2.7 ns)
+	'add' operation ('lsb_index', neural_net_HLS/solution1/fft_top.cpp:27) [26]  (2.7 ns)
+
+ <State 5>: 7.63ns
+The critical path consists of the following:
+	'lshr' operation ('lshr_ln947', neural_net_HLS/solution1/fft_top.cpp:27) [32]  (0 ns)
+	'and' operation ('__Result__', neural_net_HLS/solution1/fft_top.cpp:27) [33]  (0 ns)
+	'icmp' operation ('icmp_ln947_1', neural_net_HLS/solution1/fft_top.cpp:27) [34]  (2.56 ns)
+	'and' operation ('a', neural_net_HLS/solution1/fft_top.cpp:27) [35]  (0 ns)
+	'or' operation ('or_ln949_2', neural_net_HLS/solution1/fft_top.cpp:27) [41]  (0 ns)
+	'add' operation ('m', neural_net_HLS/solution1/fft_top.cpp:27) [54]  (4.09 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 6>: 5.51ns
+The critical path consists of the following:
+	'select' operation ('select_ln964', neural_net_HLS/solution1/fft_top.cpp:27) [58]  (1.04 ns)
+	'add' operation ('add_ln964', neural_net_HLS/solution1/fft_top.cpp:27) [61]  (3.68 ns)
+	'select' operation ('re', neural_net_HLS/solution1/fft_top.cpp:27) [66]  (0.796 ns)
+
+ <State 7>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', neural_net_HLS/solution1/fft_top.cpp:29) [118]  (5.78 ns)
+
+ <State 8>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', neural_net_HLS/solution1/fft_top.cpp:29) [118]  (5.78 ns)
+
+ <State 9>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', neural_net_HLS/solution1/fft_top.cpp:29) [118]  (5.78 ns)
+
+ <State 10>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp', neural_net_HLS/solution1/fft_top.cpp:29) [118]  (5.78 ns)
+
+ <State 11>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_14', neural_net_HLS/solution1/fft_top.cpp:29) [120]  (8.26 ns)
+
+ <State 12>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_14', neural_net_HLS/solution1/fft_top.cpp:29) [120]  (8.26 ns)
+
+ <State 13>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_14', neural_net_HLS/solution1/fft_top.cpp:29) [120]  (8.26 ns)
+
+ <State 14>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_14', neural_net_HLS/solution1/fft_top.cpp:29) [120]  (8.26 ns)
+
+ <State 15>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_14', neural_net_HLS/solution1/fft_top.cpp:29) [120]  (8.26 ns)
+
+ <State 16>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_15', neural_net_HLS/solution1/fft_top.cpp:29) [121]  (5.78 ns)
+
+ <State 17>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_15', neural_net_HLS/solution1/fft_top.cpp:29) [121]  (5.78 ns)
+
+ <State 18>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_15', neural_net_HLS/solution1/fft_top.cpp:29) [121]  (5.78 ns)
+
+ <State 19>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_15', neural_net_HLS/solution1/fft_top.cpp:29) [121]  (5.78 ns)
+
+ <State 20>: 3.26ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr', neural_net_HLS/solution1/fft_top.cpp:29) [122]  (0 ns)
+	'store' operation ('store_ln29', neural_net_HLS/solution1/fft_top.cpp:29) of variable 'tmp_15', neural_net_HLS/solution1/fft_top.cpp:29 on array 'out_r' [123]  (3.26 ns)
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

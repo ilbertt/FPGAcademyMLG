@@ -1,5 +1,6 @@
 #include "ap_fixed.h"
 #include "hls_fft.h"
+#include "mylib.h"
 
 // configurable params
 const char FFT_INPUT_WIDTH                     = 16;
@@ -28,7 +29,7 @@ typedef std::complex<data_out_t> cmpxDataOut;
 void dummy_proc_fe(
     bool direction,
     config_t* config,
-    float in[FFT_LENGTH],
+    short int in[FFT_LENGTH],
     cmpxDataIn out[FFT_LENGTH]);
 
 void dummy_proc_be(
@@ -38,5 +39,5 @@ void dummy_proc_be(
     float out[FFT_LENGTH]);
 
 void fft_top(
-    float in[FFT_LENGTH],
-    float out[FFT_LENGTH]);
+    short int in[FFT_LENGTH],
+    float out[N]);

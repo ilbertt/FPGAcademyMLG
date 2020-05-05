@@ -1,0 +1,131 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fft_top'" level="0">
+<item name = "Date">Mon May  4 11:14:28 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">neural_net_HLS</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a35t-cpg236-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.750 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">6278, 6278, 62.780 us, 62.780 us, 6279, 6279, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="dummy_proc_be_U0">dummy_proc_be, 531, 531, 5.310 us, 5.310 us, 531, 531, none</column>
+<column name="dummy_proc_fe_U0">dummy_proc_fe, 2064, 2064, 20.640 us, 20.640 us, 2064, 2064, none</column>
+<column name="fft_config1_U0">fft_config1_s, 6278, 6278, 62.780 us, 62.780 us, 6278, 6278, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 4, -</column>
+<column name="FIFO">8, -, 161, 328, -</column>
+<column name="Instance">8, 29, 13796, 12820, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">100, 90, 41600, 20800, 0</specialColumn>
+<specialColumn name="Utilization (%)">16, 32, 33, 63, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="dummy_proc_be_U0">dummy_proc_be, 0, 11, 1826, 2658, 0</column>
+<column name="dummy_proc_fe_U0">dummy_proc_fe, 0, 3, 974, 1329, 0</column>
+<column name="fft_config1_U0">fft_config1_s, 8, 15, 10996, 8833, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="fft_config_data_V_U">0, 5, 0, -, 2, 16, 32</column>
+<column name="xk_channel_U">4, 78, 0, -, 2048, 32, 65536</column>
+<column name="xn_channel_U">4, 78, 0, -, 2048, 32, 65536</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="dummy_proc_fe_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="in_r_dout">in, 16, ap_fifo, in_r, pointer</column>
+<column name="in_r_empty_n">in, 1, ap_fifo, in_r, pointer</column>
+<column name="in_r_read">out, 1, ap_fifo, in_r, pointer</column>
+<column name="out_r_address0">out, 9, ap_memory, out_r, array</column>
+<column name="out_r_ce0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_d0">out, 32, ap_memory, out_r, array</column>
+<column name="out_r_q0">in, 32, ap_memory, out_r, array</column>
+<column name="out_r_we0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_address1">out, 9, ap_memory, out_r, array</column>
+<column name="out_r_ce1">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_d1">out, 32, ap_memory, out_r, array</column>
+<column name="out_r_q1">in, 32, ap_memory, out_r, array</column>
+<column name="out_r_we1">out, 1, ap_memory, out_r, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, fft_top, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, fft_top, return value</column>
+</table>
+</item>
+</section>
+</profile>

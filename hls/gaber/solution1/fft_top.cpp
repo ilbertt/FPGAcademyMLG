@@ -1,9 +1,10 @@
 #include "fft_top.h"
+#include "mylib.h"
 
 void dummy_proc_fe(
     bool direction,
     config_t* config,
-    float *in,
+    short int *in,
     cmpxDataIn out[FFT_LENGTH])
 {
     int i;
@@ -11,7 +12,7 @@ void dummy_proc_fe(
     config->setSch(0x2AB);
     for (i=0; i< FFT_LENGTH; i++)
         #pragma HLS PIPELINE
-    	out[i] = cmpxDataIn(in[i], 0);;
+    	out[i] = cmpxDataIn((float)in[i]/512, 0);;
 }
 
 void dummy_proc_be(
@@ -21,23 +22,20 @@ void dummy_proc_be(
 {
     int i;
     float im, re;
-    for (i=0; i< FFT_LENGTH; i++) {
+    for (i=0; i< N; i++) {
 		#pragma HLS PIPELINE
     	re=in[i].real().to_float();
     	im=in[i].imag().to_float();
-        out[i] = (re*re+im*im)*1048576; //multiply for (2**10)**2 to obtain unscaled fft
+        out[i] = (re*re+im*im)*262144; //512**2
     }
 }
 
 
 void fft_top(
-    float in[FFT_LENGTH],
-    float out[FFT_LENGTH])
+    short int in[FFT_LENGTH],
+    float out[N])
 {
-#pragma HLS interface ap_fifo depth=FFT_LENGTH port=in,out
-#pragma HLS data_pack variable=in
-#pragma HLS data_pack variable=out
-#pragma HLS dataflow
+	#pragma HLS dataflow
 	complex<data_in_t> xn[FFT_LENGTH];
     complex<data_out_t> xk[FFT_LENGTH];
     config_t fft_config;

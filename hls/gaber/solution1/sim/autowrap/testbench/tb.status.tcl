@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/gigo/neural_net_HLS/solution1/./sim/autowrap/testbench/kernel.cpp_pre.cpp.tb.cpp

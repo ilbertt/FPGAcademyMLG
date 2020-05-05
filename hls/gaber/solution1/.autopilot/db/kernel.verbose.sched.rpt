@@ -1,0 +1,961 @@
+
+
+================================================================
+== Vivado HLS Report for 'kernel'
+================================================================
+* Date:           Mon May  4 11:14:26 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        neural_net_HLS
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.870 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    99476|    99476| 0.995 ms | 0.995 ms |  99476|  99476|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop1     |    90736|    90736|      5671|          -|          -|    16|    no    |
+        | + loop1.1  |     5632|     5632|        11|          -|          -|   512|    no    |
+        |- loop2     |     1720|     1720|       215|          -|          -|     8|    no    |
+        | + loop2.1  |      176|      176|        11|          -|          -|    16|    no    |
+        |- loop3     |      508|      508|       127|          -|          -|     4|    no    |
+        | + loop3.1  |       88|       88|        11|          -|          -|     8|    no    |
+        |- loop4     |      166|      166|        83|          -|          -|     2|    no    |
+        | + loop4.1  |       44|       44|        11|          -|          -|     4|    no    |
+        |- loopout   |       22|       22|        11|          -|          -|     2|    no    |
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 74
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 17 
+4 --> 5 
+5 --> 6 16 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 5 
+16 --> 3 
+17 --> 18 31 
+18 --> 19 
+19 --> 20 30 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 19 
+30 --> 17 
+31 --> 32 45 
+32 --> 33 
+33 --> 34 44 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 33 
+44 --> 31 
+45 --> 46 59 
+46 --> 47 
+47 --> 48 58 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 47 
+58 --> 45 
+59 --> 60 70 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 59 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%vec0 = alloca [512 x float], align 16"   --->   Operation 75 'alloca' 'vec0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%vec1 = alloca [16 x float], align 16" [neural_net_HLS/solution1/kernel.cpp:22]   --->   Operation 76 'alloca' 'vec1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%vec2 = alloca [8 x float], align 16" [neural_net_HLS/solution1/kernel.cpp:22]   --->   Operation 77 'alloca' 'vec2' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%vec3 = alloca [4 x float], align 16" [neural_net_HLS/solution1/kernel.cpp:22]   --->   Operation 78 'alloca' 'vec3' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%vec4 = alloca [2 x float], align 4" [neural_net_HLS/solution1/kernel.cpp:22]   --->   Operation 79 'alloca' 'vec4' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 80 [2/2] (0.00ns)   --->   "call fastcc void @fft_top(i16* %op, [512 x float]* %vec0) nounwind" [neural_net_HLS/solution1/kernel.cpp:24]   --->   Operation 80 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.66>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %op) nounwind, !map !121"   --->   Operation 81 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %res) nounwind, !map !127"   --->   Operation 82 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @kernel_str) nounwind"   --->   Operation 83 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %op, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [neural_net_HLS/solution1/kernel.cpp:19]   --->   Operation 84 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %res, [8 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [neural_net_HLS/solution1/kernel.cpp:20]   --->   Operation 85 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [11 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [neural_net_HLS/solution1/kernel.cpp:21]   --->   Operation 86 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 87 [1/2] (0.00ns)   --->   "call fastcc void @fft_top(i16* %op, [512 x float]* %vec0) nounwind" [neural_net_HLS/solution1/kernel.cpp:24]   --->   Operation 87 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 88 [1/1] (1.66ns)   --->   "br label %1" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 88 'br' <Predicate = true> <Delay = 1.66>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%i_0 = phi i5 [ 0, %0 ], [ %i, %loop1_end ]"   --->   Operation 89 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (1.44ns)   --->   "%icmp_ln26 = icmp eq i5 %i_0, -16" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 90 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 91 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (1.86ns)   --->   "%i = add i5 %i_0, 1" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 92 'add' 'i' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "br i1 %icmp_ln26, label %.preheader2.preheader, label %loop1_begin" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln27 = zext i5 %i_0 to i64" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 94 'zext' 'zext_ln27' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%b1_addr = getelementptr inbounds [16 x float]* @b1, i64 0, i64 %zext_ln27" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 95 'getelementptr' 'b1_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 96 [2/2] (3.25ns)   --->   "%b1_load = load float* %b1_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 96 'load' 'b1_load' <Predicate = (!icmp_ln26)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%vec1_addr = getelementptr inbounds [16 x float]* %vec1, i64 0, i64 %zext_ln27" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 97 'getelementptr' 'vec1_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln29 = trunc i5 %i_0 to i4" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 98 'trunc' 'trunc_ln29' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (1.66ns)   --->   "br label %.preheader2" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 99 'br' <Predicate = (icmp_ln26)> <Delay = 1.66>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str4) nounwind" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 100 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str4) nounwind" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 101 'specregionbegin' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 102 [1/2] (3.25ns)   --->   "%b1_load = load float* %b1_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 102 'load' 'b1_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%shl_ln = call i13 @_ssdm_op_BitConcatenate.i13.i4.i9(i4 %trunc_ln29, i9 0)" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 103 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (1.66ns)   --->   "br label %2" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 104 'br' <Predicate = true> <Delay = 1.66>
+
+State 5 <SV = 4> <Delay = 6.89>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%empty_21 = phi float [ %b1_load, %loop1_begin ], [ %tmp_2, %3 ]" [neural_net_HLS/solution1/kernel.cpp:27]   --->   Operation 105 'phi' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%j_0 = phi i10 [ 0, %loop1_begin ], [ %j, %3 ]"   --->   Operation 106 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i10 %j_0 to i13" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 107 'zext' 'zext_ln28' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (1.70ns)   --->   "%icmp_ln28 = icmp eq i10 %j_0, -512" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 108 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512) nounwind"   --->   Operation 109 'speclooptripcount' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 110 [1/1] (2.12ns)   --->   "%j = add i10 %j_0, 1" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 110 'add' 'j' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "br i1 %icmp_ln28, label %loop1_end, label %3" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 111 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln29 = zext i10 %j_0 to i64" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 112 'zext' 'zext_ln29' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%vec0_addr = getelementptr inbounds [512 x float]* %vec0, i64 0, i64 %zext_ln29" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 113 'getelementptr' 'vec0_addr' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_5 : Operation 114 [2/2] (3.25ns)   --->   "%vec0_load = load float* %vec0_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 114 'load' 'vec0_load' <Predicate = (!icmp_ln28)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_5 : Operation 115 [1/1] (2.13ns)   --->   "%add_ln29 = add i13 %shl_ln, %zext_ln28" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 115 'add' 'add_ln29' <Predicate = (!icmp_ln28)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 116 [1/1] (0.00ns)   --->   "%zext_ln29_1 = zext i13 %add_ln29 to i64" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 116 'zext' 'zext_ln29_1' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%w1_addr = getelementptr inbounds [8192 x float]* @w1, i64 0, i64 %zext_ln29_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 117 'getelementptr' 'w1_addr' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_5 : Operation 118 [2/2] (3.25ns)   --->   "%w1_load = load float* %w1_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 118 'load' 'w1_load' <Predicate = (!icmp_ln28)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_5 : Operation 119 [2/2] (6.89ns)   --->   "%tmp = call fastcc float @act_fun(float %empty_21)" [neural_net_HLS/solution1/kernel.cpp:31]   --->   Operation 119 'call' 'tmp' <Predicate = (icmp_ln28)> <Delay = 6.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 120 [1/2] (3.25ns)   --->   "%vec0_load = load float* %vec0_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 120 'load' 'vec0_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_6 : Operation 121 [1/2] (3.25ns)   --->   "%w1_load = load float* %w1_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 121 'load' 'w1_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+
+State 7 <SV = 6> <Delay = 5.78>
+ST_7 : Operation 122 [4/4] (5.78ns)   --->   "%tmp_1 = fmul float %vec0_load, %w1_load" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 122 'fmul' 'tmp_1' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 5.78>
+ST_8 : Operation 123 [3/4] (5.78ns)   --->   "%tmp_1 = fmul float %vec0_load, %w1_load" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 123 'fmul' 'tmp_1' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.78>
+ST_9 : Operation 124 [2/4] (5.78ns)   --->   "%tmp_1 = fmul float %vec0_load, %w1_load" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 124 'fmul' 'tmp_1' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 5.78>
+ST_10 : Operation 125 [1/4] (5.78ns)   --->   "%tmp_1 = fmul float %vec0_load, %w1_load" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 125 'fmul' 'tmp_1' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 8.26>
+ST_11 : Operation 126 [5/5] (8.26ns)   --->   "%tmp_2 = fadd float %empty_21, %tmp_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 126 'fadd' 'tmp_2' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 8.26>
+ST_12 : Operation 127 [4/5] (8.26ns)   --->   "%tmp_2 = fadd float %empty_21, %tmp_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 127 'fadd' 'tmp_2' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 8.26>
+ST_13 : Operation 128 [3/5] (8.26ns)   --->   "%tmp_2 = fadd float %empty_21, %tmp_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 128 'fadd' 'tmp_2' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 8.26>
+ST_14 : Operation 129 [2/5] (8.26ns)   --->   "%tmp_2 = fadd float %empty_21, %tmp_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 129 'fadd' 'tmp_2' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 8.26>
+ST_15 : Operation 130 [1/5] (8.26ns)   --->   "%tmp_2 = fadd float %empty_21, %tmp_1" [neural_net_HLS/solution1/kernel.cpp:29]   --->   Operation 130 'fadd' 'tmp_2' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 131 [1/1] (0.00ns)   --->   "br label %2" [neural_net_HLS/solution1/kernel.cpp:28]   --->   Operation 131 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 5> <Delay = 8.29>
+ST_16 : Operation 132 [1/2] (6.14ns)   --->   "%tmp = call fastcc float @act_fun(float %empty_21)" [neural_net_HLS/solution1/kernel.cpp:31]   --->   Operation 132 'call' 'tmp' <Predicate = true> <Delay = 6.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 133 [1/1] (2.15ns)   --->   "store float %tmp, float* %vec1_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:31]   --->   Operation 133 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_16 : Operation 134 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str4, i32 %tmp_9) nounwind" [neural_net_HLS/solution1/kernel.cpp:33]   --->   Operation 134 'specregionend' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 135 [1/1] (0.00ns)   --->   "br label %1" [neural_net_HLS/solution1/kernel.cpp:26]   --->   Operation 135 'br' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 3> <Delay = 3.25>
+ST_17 : Operation 136 [1/1] (0.00ns)   --->   "%i1_0 = phi i4 [ %i_1, %loop2_end ], [ 0, %.preheader2.preheader ]"   --->   Operation 136 'phi' 'i1_0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 137 [1/1] (1.44ns)   --->   "%icmp_ln34 = icmp eq i4 %i1_0, -8" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 137 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 138 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind"   --->   Operation 138 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 139 [1/1] (1.77ns)   --->   "%i_1 = add i4 %i1_0, 1" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 139 'add' 'i_1' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %icmp_ln34, label %.preheader1.preheader, label %loop2_begin" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 140 'br' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln35 = zext i4 %i1_0 to i64" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 141 'zext' 'zext_ln35' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_17 : Operation 142 [1/1] (0.00ns)   --->   "%b2_addr = getelementptr inbounds [8 x float]* @b2, i64 0, i64 %zext_ln35" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 142 'getelementptr' 'b2_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_17 : Operation 143 [2/2] (3.25ns)   --->   "%b2_load = load float* %b2_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 143 'load' 'b2_load' <Predicate = (!icmp_ln34)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_17 : Operation 144 [1/1] (0.00ns)   --->   "%vec2_addr = getelementptr inbounds [8 x float]* %vec2, i64 0, i64 %zext_ln35" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 144 'getelementptr' 'vec2_addr' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_17 : Operation 145 [1/1] (0.00ns)   --->   "%trunc_ln37 = trunc i4 %i1_0 to i3" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 145 'trunc' 'trunc_ln37' <Predicate = (!icmp_ln34)> <Delay = 0.00>
+ST_17 : Operation 146 [1/1] (1.66ns)   --->   "br label %.preheader1" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 146 'br' <Predicate = (icmp_ln34)> <Delay = 1.66>
+
+State 18 <SV = 4> <Delay = 3.25>
+ST_18 : Operation 147 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str5) nounwind" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 147 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_14 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str5) nounwind" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 148 'specregionbegin' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 149 [1/2] (3.25ns)   --->   "%b2_load = load float* %b2_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 149 'load' 'b2_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_18 : Operation 150 [1/1] (0.00ns)   --->   "%shl_ln1 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %trunc_ln37, i4 0)" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 150 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 151 [1/1] (1.66ns)   --->   "br label %4" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 151 'br' <Predicate = true> <Delay = 1.66>
+
+State 19 <SV = 5> <Delay = 6.89>
+ST_19 : Operation 152 [1/1] (0.00ns)   --->   "%empty_25 = phi float [ %b2_load, %loop2_begin ], [ %tmp_5, %5 ]" [neural_net_HLS/solution1/kernel.cpp:35]   --->   Operation 152 'phi' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 153 [1/1] (0.00ns)   --->   "%j2_0 = phi i5 [ 0, %loop2_begin ], [ %j_1, %5 ]"   --->   Operation 153 'phi' 'j2_0' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 154 [1/1] (0.00ns)   --->   "%zext_ln36 = zext i5 %j2_0 to i7" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 154 'zext' 'zext_ln36' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 155 [1/1] (1.44ns)   --->   "%icmp_ln36 = icmp eq i5 %j2_0, -16" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 155 'icmp' 'icmp_ln36' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 156 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 156 'speclooptripcount' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 157 [1/1] (1.86ns)   --->   "%j_1 = add i5 %j2_0, 1" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 157 'add' 'j_1' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 158 [1/1] (0.00ns)   --->   "br i1 %icmp_ln36, label %loop2_end, label %5" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 158 'br' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 159 [1/1] (2.03ns)   --->   "%add_ln37 = add i7 %shl_ln1, %zext_ln36" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 159 'add' 'add_ln37' <Predicate = (!icmp_ln36)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 160 [1/1] (0.00ns)   --->   "%zext_ln37_1 = zext i7 %add_ln37 to i64" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 160 'zext' 'zext_ln37_1' <Predicate = (!icmp_ln36)> <Delay = 0.00>
+ST_19 : Operation 161 [1/1] (0.00ns)   --->   "%w2_addr = getelementptr inbounds [128 x float]* @w2, i64 0, i64 %zext_ln37_1" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 161 'getelementptr' 'w2_addr' <Predicate = (!icmp_ln36)> <Delay = 0.00>
+ST_19 : Operation 162 [2/2] (3.25ns)   --->   "%w2_load = load float* %w2_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 162 'load' 'w2_load' <Predicate = (!icmp_ln36)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_19 : Operation 163 [2/2] (6.89ns)   --->   "%tmp_3 = call fastcc float @act_fun(float %empty_25)" [neural_net_HLS/solution1/kernel.cpp:39]   --->   Operation 163 'call' 'tmp_3' <Predicate = (icmp_ln36)> <Delay = 6.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 6> <Delay = 3.25>
+ST_20 : Operation 164 [1/1] (0.00ns)   --->   "%zext_ln37 = zext i5 %j2_0 to i64" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 164 'zext' 'zext_ln37' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 165 [1/1] (0.00ns)   --->   "%vec1_addr_1 = getelementptr inbounds [16 x float]* %vec1, i64 0, i64 %zext_ln37" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 165 'getelementptr' 'vec1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 166 [2/2] (2.15ns)   --->   "%vec1_load = load float* %vec1_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 166 'load' 'vec1_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_20 : Operation 167 [1/2] (3.25ns)   --->   "%w2_load = load float* %w2_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 167 'load' 'w2_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+
+State 21 <SV = 7> <Delay = 7.93>
+ST_21 : Operation 168 [1/2] (2.15ns)   --->   "%vec1_load = load float* %vec1_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 168 'load' 'vec1_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_21 : Operation 169 [4/4] (5.78ns)   --->   "%tmp_4 = fmul float %vec1_load, %w2_load" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 169 'fmul' 'tmp_4' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 8> <Delay = 5.78>
+ST_22 : Operation 170 [3/4] (5.78ns)   --->   "%tmp_4 = fmul float %vec1_load, %w2_load" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 170 'fmul' 'tmp_4' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 9> <Delay = 5.78>
+ST_23 : Operation 171 [2/4] (5.78ns)   --->   "%tmp_4 = fmul float %vec1_load, %w2_load" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 171 'fmul' 'tmp_4' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 10> <Delay = 5.78>
+ST_24 : Operation 172 [1/4] (5.78ns)   --->   "%tmp_4 = fmul float %vec1_load, %w2_load" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 172 'fmul' 'tmp_4' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 11> <Delay = 8.26>
+ST_25 : Operation 173 [5/5] (8.26ns)   --->   "%tmp_5 = fadd float %empty_25, %tmp_4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 173 'fadd' 'tmp_5' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 12> <Delay = 8.26>
+ST_26 : Operation 174 [4/5] (8.26ns)   --->   "%tmp_5 = fadd float %empty_25, %tmp_4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 174 'fadd' 'tmp_5' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 13> <Delay = 8.26>
+ST_27 : Operation 175 [3/5] (8.26ns)   --->   "%tmp_5 = fadd float %empty_25, %tmp_4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 175 'fadd' 'tmp_5' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 14> <Delay = 8.26>
+ST_28 : Operation 176 [2/5] (8.26ns)   --->   "%tmp_5 = fadd float %empty_25, %tmp_4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 176 'fadd' 'tmp_5' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 15> <Delay = 8.26>
+ST_29 : Operation 177 [1/5] (8.26ns)   --->   "%tmp_5 = fadd float %empty_25, %tmp_4" [neural_net_HLS/solution1/kernel.cpp:37]   --->   Operation 177 'fadd' 'tmp_5' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 178 [1/1] (0.00ns)   --->   "br label %4" [neural_net_HLS/solution1/kernel.cpp:36]   --->   Operation 178 'br' <Predicate = true> <Delay = 0.00>
+
+State 30 <SV = 6> <Delay = 8.29>
+ST_30 : Operation 179 [1/2] (6.14ns)   --->   "%tmp_3 = call fastcc float @act_fun(float %empty_25)" [neural_net_HLS/solution1/kernel.cpp:39]   --->   Operation 179 'call' 'tmp_3' <Predicate = true> <Delay = 6.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 180 [1/1] (2.15ns)   --->   "store float %tmp_3, float* %vec2_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:39]   --->   Operation 180 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_30 : Operation 181 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str5, i32 %tmp_14) nounwind" [neural_net_HLS/solution1/kernel.cpp:40]   --->   Operation 181 'specregionend' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 182 [1/1] (0.00ns)   --->   "br label %.preheader2" [neural_net_HLS/solution1/kernel.cpp:34]   --->   Operation 182 'br' <Predicate = true> <Delay = 0.00>
+
+State 31 <SV = 4> <Delay = 3.25>
+ST_31 : Operation 183 [1/1] (0.00ns)   --->   "%i3_0 = phi i3 [ %i_2, %loop3_end ], [ 0, %.preheader1.preheader ]"   --->   Operation 183 'phi' 'i3_0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 184 [1/1] (1.18ns)   --->   "%icmp_ln41 = icmp eq i3 %i3_0, -4" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 184 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 185 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 185 'speclooptripcount' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 186 [1/1] (1.68ns)   --->   "%i_2 = add i3 %i3_0, 1" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 186 'add' 'i_2' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 187 [1/1] (0.00ns)   --->   "br i1 %icmp_ln41, label %.preheader.preheader, label %loop3_begin" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 187 'br' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 188 [1/1] (0.00ns)   --->   "%zext_ln42 = zext i3 %i3_0 to i64" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 188 'zext' 'zext_ln42' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_31 : Operation 189 [1/1] (0.00ns)   --->   "%b3_addr = getelementptr inbounds [4 x float]* @b3, i64 0, i64 %zext_ln42" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 189 'getelementptr' 'b3_addr' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_31 : Operation 190 [2/2] (3.25ns)   --->   "%b3_load = load float* %b3_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 190 'load' 'b3_load' <Predicate = (!icmp_ln41)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_31 : Operation 191 [1/1] (0.00ns)   --->   "%vec3_addr = getelementptr inbounds [4 x float]* %vec3, i64 0, i64 %zext_ln42" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 191 'getelementptr' 'vec3_addr' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_31 : Operation 192 [1/1] (0.00ns)   --->   "%trunc_ln44 = trunc i3 %i3_0 to i2" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 192 'trunc' 'trunc_ln44' <Predicate = (!icmp_ln41)> <Delay = 0.00>
+ST_31 : Operation 193 [1/1] (1.66ns)   --->   "br label %.preheader" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 193 'br' <Predicate = (icmp_ln41)> <Delay = 1.66>
+
+State 32 <SV = 5> <Delay = 3.25>
+ST_32 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str6) nounwind" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 194 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 195 [1/1] (0.00ns)   --->   "%tmp_15 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str6) nounwind" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 195 'specregionbegin' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 196 [1/2] (3.25ns)   --->   "%b3_load = load float* %b3_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 196 'load' 'b3_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_32 : Operation 197 [1/1] (0.00ns)   --->   "%shl_ln2 = call i5 @_ssdm_op_BitConcatenate.i5.i2.i3(i2 %trunc_ln44, i3 0)" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 197 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 198 [1/1] (1.66ns)   --->   "br label %6" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 198 'br' <Predicate = true> <Delay = 1.66>
+
+State 33 <SV = 6> <Delay = 6.89>
+ST_33 : Operation 199 [1/1] (0.00ns)   --->   "%empty_29 = phi float [ %b3_load, %loop3_begin ], [ %tmp_8, %7 ]" [neural_net_HLS/solution1/kernel.cpp:42]   --->   Operation 199 'phi' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 200 [1/1] (0.00ns)   --->   "%j4_0 = phi i4 [ 0, %loop3_begin ], [ %j_2, %7 ]"   --->   Operation 200 'phi' 'j4_0' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 201 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i4 %j4_0 to i5" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 201 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 202 [1/1] (1.44ns)   --->   "%icmp_ln43 = icmp eq i4 %j4_0, -8" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 202 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 203 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind"   --->   Operation 203 'speclooptripcount' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 204 [1/1] (1.77ns)   --->   "%j_2 = add i4 %j4_0, 1" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 204 'add' 'j_2' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 205 [1/1] (0.00ns)   --->   "br i1 %icmp_ln43, label %loop3_end, label %7" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 205 'br' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 206 [1/1] (1.86ns)   --->   "%add_ln44 = add i5 %shl_ln2, %zext_ln43" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 206 'add' 'add_ln44' <Predicate = (!icmp_ln43)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 207 [1/1] (0.00ns)   --->   "%zext_ln44_1 = zext i5 %add_ln44 to i64" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 207 'zext' 'zext_ln44_1' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_33 : Operation 208 [1/1] (0.00ns)   --->   "%w3_addr = getelementptr inbounds [32 x float]* @w3, i64 0, i64 %zext_ln44_1" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 208 'getelementptr' 'w3_addr' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_33 : Operation 209 [2/2] (3.25ns)   --->   "%w3_load = load float* %w3_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 209 'load' 'w3_load' <Predicate = (!icmp_ln43)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_33 : Operation 210 [2/2] (6.89ns)   --->   "%tmp_6 = call fastcc float @act_fun(float %empty_29)" [neural_net_HLS/solution1/kernel.cpp:46]   --->   Operation 210 'call' 'tmp_6' <Predicate = (icmp_ln43)> <Delay = 6.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 7> <Delay = 3.25>
+ST_34 : Operation 211 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i4 %j4_0 to i64" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 211 'zext' 'zext_ln44' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 212 [1/1] (0.00ns)   --->   "%vec2_addr_1 = getelementptr inbounds [8 x float]* %vec2, i64 0, i64 %zext_ln44" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 212 'getelementptr' 'vec2_addr_1' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 213 [2/2] (2.15ns)   --->   "%vec2_load = load float* %vec2_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 213 'load' 'vec2_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_34 : Operation 214 [1/2] (3.25ns)   --->   "%w3_load = load float* %w3_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 214 'load' 'w3_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+
+State 35 <SV = 8> <Delay = 7.93>
+ST_35 : Operation 215 [1/2] (2.15ns)   --->   "%vec2_load = load float* %vec2_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 215 'load' 'vec2_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_35 : Operation 216 [4/4] (5.78ns)   --->   "%tmp_7 = fmul float %vec2_load, %w3_load" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 216 'fmul' 'tmp_7' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 9> <Delay = 5.78>
+ST_36 : Operation 217 [3/4] (5.78ns)   --->   "%tmp_7 = fmul float %vec2_load, %w3_load" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 217 'fmul' 'tmp_7' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 10> <Delay = 5.78>
+ST_37 : Operation 218 [2/4] (5.78ns)   --->   "%tmp_7 = fmul float %vec2_load, %w3_load" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 218 'fmul' 'tmp_7' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 11> <Delay = 5.78>
+ST_38 : Operation 219 [1/4] (5.78ns)   --->   "%tmp_7 = fmul float %vec2_load, %w3_load" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 219 'fmul' 'tmp_7' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 12> <Delay = 8.26>
+ST_39 : Operation 220 [5/5] (8.26ns)   --->   "%tmp_8 = fadd float %empty_29, %tmp_7" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 220 'fadd' 'tmp_8' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 13> <Delay = 8.26>
+ST_40 : Operation 221 [4/5] (8.26ns)   --->   "%tmp_8 = fadd float %empty_29, %tmp_7" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 221 'fadd' 'tmp_8' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 14> <Delay = 8.26>
+ST_41 : Operation 222 [3/5] (8.26ns)   --->   "%tmp_8 = fadd float %empty_29, %tmp_7" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 222 'fadd' 'tmp_8' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 15> <Delay = 8.26>
+ST_42 : Operation 223 [2/5] (8.26ns)   --->   "%tmp_8 = fadd float %empty_29, %tmp_7" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 223 'fadd' 'tmp_8' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 16> <Delay = 8.26>
+ST_43 : Operation 224 [1/5] (8.26ns)   --->   "%tmp_8 = fadd float %empty_29, %tmp_7" [neural_net_HLS/solution1/kernel.cpp:44]   --->   Operation 224 'fadd' 'tmp_8' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 225 [1/1] (0.00ns)   --->   "br label %6" [neural_net_HLS/solution1/kernel.cpp:43]   --->   Operation 225 'br' <Predicate = true> <Delay = 0.00>
+
+State 44 <SV = 7> <Delay = 8.29>
+ST_44 : Operation 226 [1/2] (6.14ns)   --->   "%tmp_6 = call fastcc float @act_fun(float %empty_29)" [neural_net_HLS/solution1/kernel.cpp:46]   --->   Operation 226 'call' 'tmp_6' <Predicate = true> <Delay = 6.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_44 : Operation 227 [1/1] (2.15ns)   --->   "store float %tmp_6, float* %vec3_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:46]   --->   Operation 227 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_44 : Operation 228 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str6, i32 %tmp_15) nounwind" [neural_net_HLS/solution1/kernel.cpp:47]   --->   Operation 228 'specregionend' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 229 [1/1] (0.00ns)   --->   "br label %.preheader1" [neural_net_HLS/solution1/kernel.cpp:41]   --->   Operation 229 'br' <Predicate = true> <Delay = 0.00>
+
+State 45 <SV = 5> <Delay = 3.25>
+ST_45 : Operation 230 [1/1] (0.00ns)   --->   "%i5_0 = phi i2 [ %i_3, %loop4_end ], [ 0, %.preheader.preheader ]"   --->   Operation 230 'phi' 'i5_0' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 231 [1/1] (0.93ns)   --->   "%icmp_ln48 = icmp eq i2 %i5_0, -2" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 231 'icmp' 'icmp_ln48' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 232 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind"   --->   Operation 232 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 233 [1/1] (1.58ns)   --->   "%i_3 = add i2 %i5_0, 1" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 233 'add' 'i_3' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 234 [1/1] (0.00ns)   --->   "br i1 %icmp_ln48, label %.preheader7.preheader, label %loop4_begin" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 234 'br' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 235 [1/1] (0.00ns)   --->   "%zext_ln49 = zext i2 %i5_0 to i64" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 235 'zext' 'zext_ln49' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_45 : Operation 236 [1/1] (0.00ns)   --->   "%b4_addr = getelementptr inbounds [2 x float]* @b4, i64 0, i64 %zext_ln49" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 236 'getelementptr' 'b4_addr' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_45 : Operation 237 [2/2] (3.25ns)   --->   "%b4_load = load float* %b4_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 237 'load' 'b4_load' <Predicate = (!icmp_ln48)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_45 : Operation 238 [1/1] (0.00ns)   --->   "%vec4_addr = getelementptr inbounds [2 x float]* %vec4, i64 0, i64 %zext_ln49" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 238 'getelementptr' 'vec4_addr' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_45 : Operation 239 [1/1] (0.00ns)   --->   "%trunc_ln51 = trunc i2 %i5_0 to i1" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 239 'trunc' 'trunc_ln51' <Predicate = (!icmp_ln48)> <Delay = 0.00>
+ST_45 : Operation 240 [1/1] (1.66ns)   --->   "br label %.preheader7" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 240 'br' <Predicate = (icmp_ln48)> <Delay = 1.66>
+
+State 46 <SV = 6> <Delay = 3.25>
+ST_46 : Operation 241 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str7) nounwind" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 241 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 242 [1/1] (0.00ns)   --->   "%tmp_16 = call i32 (...)* @_ssdm_op_SpecRegionBegin([6 x i8]* @p_str7) nounwind" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 242 'specregionbegin' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 243 [1/2] (3.25ns)   --->   "%b4_load = load float* %b4_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 243 'load' 'b4_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_46 : Operation 244 [1/1] (0.00ns)   --->   "%shl_ln3 = call i3 @_ssdm_op_BitConcatenate.i3.i1.i2(i1 %trunc_ln51, i2 0)" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 244 'bitconcatenate' 'shl_ln3' <Predicate = true> <Delay = 0.00>
+ST_46 : Operation 245 [1/1] (1.66ns)   --->   "br label %8" [neural_net_HLS/solution1/kernel.cpp:50]   --->   Operation 245 'br' <Predicate = true> <Delay = 1.66>
+
+State 47 <SV = 7> <Delay = 6.89>
+ST_47 : Operation 246 [1/1] (0.00ns)   --->   "%empty_33 = phi float [ %b4_load, %loop4_begin ], [ %tmp_13, %9 ]" [neural_net_HLS/solution1/kernel.cpp:49]   --->   Operation 246 'phi' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 247 [1/1] (0.00ns)   --->   "%j6_0 = phi i3 [ 0, %loop4_begin ], [ %j_4, %9 ]"   --->   Operation 247 'phi' 'j6_0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 248 [1/1] (1.18ns)   --->   "%icmp_ln50 = icmp eq i3 %j6_0, -4" [neural_net_HLS/solution1/kernel.cpp:50]   --->   Operation 248 'icmp' 'icmp_ln50' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 249 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 249 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 250 [1/1] (1.68ns)   --->   "%j_4 = add i3 %j6_0, 1" [neural_net_HLS/solution1/kernel.cpp:50]   --->   Operation 250 'add' 'j_4' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 251 [1/1] (0.00ns)   --->   "br i1 %icmp_ln50, label %loop4_end, label %9" [neural_net_HLS/solution1/kernel.cpp:50]   --->   Operation 251 'br' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 252 [1/1] (1.68ns)   --->   "%add_ln51 = add i3 %shl_ln3, %j6_0" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 252 'add' 'add_ln51' <Predicate = (!icmp_ln50)> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 253 [1/1] (0.00ns)   --->   "%zext_ln51_1 = zext i3 %add_ln51 to i64" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 253 'zext' 'zext_ln51_1' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_47 : Operation 254 [1/1] (0.00ns)   --->   "%w4_addr = getelementptr inbounds [8 x float]* @w4, i64 0, i64 %zext_ln51_1" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 254 'getelementptr' 'w4_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_47 : Operation 255 [2/2] (3.25ns)   --->   "%w4_load = load float* %w4_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 255 'load' 'w4_load' <Predicate = (!icmp_ln50)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_47 : Operation 256 [2/2] (6.89ns)   --->   "%tmp_11 = call fastcc float @act_fun(float %empty_33)" [neural_net_HLS/solution1/kernel.cpp:53]   --->   Operation 256 'call' 'tmp_11' <Predicate = (icmp_ln50)> <Delay = 6.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 8> <Delay = 3.25>
+ST_48 : Operation 257 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i3 %j6_0 to i64" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 257 'zext' 'zext_ln51' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 258 [1/1] (0.00ns)   --->   "%vec3_addr_1 = getelementptr inbounds [4 x float]* %vec3, i64 0, i64 %zext_ln51" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 258 'getelementptr' 'vec3_addr_1' <Predicate = true> <Delay = 0.00>
+ST_48 : Operation 259 [2/2] (2.15ns)   --->   "%vec3_load = load float* %vec3_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 259 'load' 'vec3_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_48 : Operation 260 [1/2] (3.25ns)   --->   "%w4_load = load float* %w4_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 260 'load' 'w4_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+
+State 49 <SV = 9> <Delay = 7.93>
+ST_49 : Operation 261 [1/2] (2.15ns)   --->   "%vec3_load = load float* %vec3_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 261 'load' 'vec3_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_49 : Operation 262 [4/4] (5.78ns)   --->   "%tmp_12 = fmul float %vec3_load, %w4_load" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 262 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 10> <Delay = 5.78>
+ST_50 : Operation 263 [3/4] (5.78ns)   --->   "%tmp_12 = fmul float %vec3_load, %w4_load" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 263 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 11> <Delay = 5.78>
+ST_51 : Operation 264 [2/4] (5.78ns)   --->   "%tmp_12 = fmul float %vec3_load, %w4_load" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 264 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 12> <Delay = 5.78>
+ST_52 : Operation 265 [1/4] (5.78ns)   --->   "%tmp_12 = fmul float %vec3_load, %w4_load" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 265 'fmul' 'tmp_12' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 13> <Delay = 8.26>
+ST_53 : Operation 266 [5/5] (8.26ns)   --->   "%tmp_13 = fadd float %empty_33, %tmp_12" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 266 'fadd' 'tmp_13' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 14> <Delay = 8.26>
+ST_54 : Operation 267 [4/5] (8.26ns)   --->   "%tmp_13 = fadd float %empty_33, %tmp_12" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 267 'fadd' 'tmp_13' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 15> <Delay = 8.26>
+ST_55 : Operation 268 [3/5] (8.26ns)   --->   "%tmp_13 = fadd float %empty_33, %tmp_12" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 268 'fadd' 'tmp_13' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 16> <Delay = 8.26>
+ST_56 : Operation 269 [2/5] (8.26ns)   --->   "%tmp_13 = fadd float %empty_33, %tmp_12" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 269 'fadd' 'tmp_13' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 17> <Delay = 8.26>
+ST_57 : Operation 270 [1/5] (8.26ns)   --->   "%tmp_13 = fadd float %empty_33, %tmp_12" [neural_net_HLS/solution1/kernel.cpp:51]   --->   Operation 270 'fadd' 'tmp_13' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 271 [1/1] (0.00ns)   --->   "br label %8" [neural_net_HLS/solution1/kernel.cpp:50]   --->   Operation 271 'br' <Predicate = true> <Delay = 0.00>
+
+State 58 <SV = 8> <Delay = 8.29>
+ST_58 : Operation 272 [1/2] (6.14ns)   --->   "%tmp_11 = call fastcc float @act_fun(float %empty_33)" [neural_net_HLS/solution1/kernel.cpp:53]   --->   Operation 272 'call' 'tmp_11' <Predicate = true> <Delay = 6.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_58 : Operation 273 [1/1] (2.15ns)   --->   "store float %tmp_11, float* %vec4_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:53]   --->   Operation 273 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_58 : Operation 274 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecRegionEnd([6 x i8]* @p_str7, i32 %tmp_16) nounwind" [neural_net_HLS/solution1/kernel.cpp:54]   --->   Operation 274 'specregionend' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 275 [1/1] (0.00ns)   --->   "br label %.preheader" [neural_net_HLS/solution1/kernel.cpp:48]   --->   Operation 275 'br' <Predicate = true> <Delay = 0.00>
+
+State 59 <SV = 6> <Delay = 6.89>
+ST_59 : Operation 276 [1/1] (0.00ns)   --->   "%res_t_0 = phi float [ %res_t_1, %10 ], [ 0x400032E060000000, %.preheader7.preheader ]"   --->   Operation 276 'phi' 'res_t_0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 277 [1/1] (0.00ns)   --->   "%j7_0 = phi i2 [ %j_3, %10 ], [ 0, %.preheader7.preheader ]"   --->   Operation 277 'phi' 'j7_0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 278 [1/1] (0.93ns)   --->   "%icmp_ln56 = icmp eq i2 %j7_0, -2" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 278 'icmp' 'icmp_ln56' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 279 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind"   --->   Operation 279 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 280 [1/1] (1.58ns)   --->   "%j_3 = add i2 %j7_0, 1" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 280 'add' 'j_3' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 281 [1/1] (0.00ns)   --->   "br i1 %icmp_ln56, label %11, label %10" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 281 'br' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 282 [1/1] (0.00ns)   --->   "%zext_ln57 = zext i2 %j7_0 to i64" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 282 'zext' 'zext_ln57' <Predicate = (!icmp_ln56)> <Delay = 0.00>
+ST_59 : Operation 283 [1/1] (0.00ns)   --->   "%vec4_addr_1 = getelementptr inbounds [2 x float]* %vec4, i64 0, i64 %zext_ln57" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 283 'getelementptr' 'vec4_addr_1' <Predicate = (!icmp_ln56)> <Delay = 0.00>
+ST_59 : Operation 284 [2/2] (2.15ns)   --->   "%vec4_load = load float* %vec4_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 284 'load' 'vec4_load' <Predicate = (!icmp_ln56)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_59 : Operation 285 [1/1] (0.00ns)   --->   "%w5_addr = getelementptr inbounds [2 x float]* @w5, i64 0, i64 %zext_ln57" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 285 'getelementptr' 'w5_addr' <Predicate = (!icmp_ln56)> <Delay = 0.00>
+ST_59 : Operation 286 [2/2] (3.25ns)   --->   "%w5_load = load float* %w5_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 286 'load' 'w5_load' <Predicate = (!icmp_ln56)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+ST_59 : Operation 287 [2/2] (6.89ns)   --->   "%res_t = call fastcc float @act_fun(float %res_t_0)" [neural_net_HLS/solution1/kernel.cpp:59]   --->   Operation 287 'call' 'res_t' <Predicate = (icmp_ln56)> <Delay = 6.89> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 7> <Delay = 3.25>
+ST_60 : Operation 288 [1/2] (2.15ns)   --->   "%vec4_load = load float* %vec4_addr_1, align 4" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 288 'load' 'vec4_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_60 : Operation 289 [1/2] (3.25ns)   --->   "%w5_load = load float* %w5_addr, align 4" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 289 'load' 'w5_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 2> <ROM>
+
+State 61 <SV = 8> <Delay = 5.78>
+ST_61 : Operation 290 [4/4] (5.78ns)   --->   "%tmp_10 = fmul float %vec4_load, %w5_load" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 290 'fmul' 'tmp_10' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 9> <Delay = 5.78>
+ST_62 : Operation 291 [3/4] (5.78ns)   --->   "%tmp_10 = fmul float %vec4_load, %w5_load" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 291 'fmul' 'tmp_10' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 10> <Delay = 5.78>
+ST_63 : Operation 292 [2/4] (5.78ns)   --->   "%tmp_10 = fmul float %vec4_load, %w5_load" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 292 'fmul' 'tmp_10' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 11> <Delay = 5.78>
+ST_64 : Operation 293 [1/4] (5.78ns)   --->   "%tmp_10 = fmul float %vec4_load, %w5_load" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 293 'fmul' 'tmp_10' <Predicate = true> <Delay = 5.78> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.78> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 12> <Delay = 8.26>
+ST_65 : Operation 294 [5/5] (8.26ns)   --->   "%res_t_1 = fadd float %res_t_0, %tmp_10" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 294 'fadd' 'res_t_1' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 13> <Delay = 8.26>
+ST_66 : Operation 295 [4/5] (8.26ns)   --->   "%res_t_1 = fadd float %res_t_0, %tmp_10" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 295 'fadd' 'res_t_1' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 14> <Delay = 8.26>
+ST_67 : Operation 296 [3/5] (8.26ns)   --->   "%res_t_1 = fadd float %res_t_0, %tmp_10" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 296 'fadd' 'res_t_1' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 15> <Delay = 8.26>
+ST_68 : Operation 297 [2/5] (8.26ns)   --->   "%res_t_1 = fadd float %res_t_0, %tmp_10" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 297 'fadd' 'res_t_1' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 16> <Delay = 8.26>
+ST_69 : Operation 298 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str8) nounwind" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 298 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_69 : Operation 299 [1/5] (8.26ns)   --->   "%res_t_1 = fadd float %res_t_0, %tmp_10" [neural_net_HLS/solution1/kernel.cpp:57]   --->   Operation 299 'fadd' 'res_t_1' <Predicate = true> <Delay = 8.26> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 8.26> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_69 : Operation 300 [1/1] (0.00ns)   --->   "br label %.preheader7" [neural_net_HLS/solution1/kernel.cpp:56]   --->   Operation 300 'br' <Predicate = true> <Delay = 0.00>
+
+State 70 <SV = 7> <Delay = 6.14>
+ST_70 : Operation 301 [1/2] (6.14ns)   --->   "%res_t = call fastcc float @act_fun(float %res_t_0)" [neural_net_HLS/solution1/kernel.cpp:59]   --->   Operation 301 'call' 'res_t' <Predicate = true> <Delay = 6.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 8> <Delay = 4.09>
+ST_71 : Operation 302 [2/2] (4.09ns)   --->   "%tmp_s = fpext float %res_t to double" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 302 'fpext' 'tmp_s' <Predicate = true> <Delay = 4.09> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.09> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 72 <SV = 9> <Delay = 4.09>
+ST_72 : Operation 303 [1/2] (4.09ns)   --->   "%tmp_s = fpext float %res_t to double" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 303 'fpext' 'tmp_s' <Predicate = true> <Delay = 4.09> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.09> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 73 <SV = 10> <Delay = 5.51>
+ST_73 : Operation 304 [1/1] (0.00ns)   --->   "%bitcast_ln60 = bitcast double %tmp_s to i64" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 304 'bitcast' 'bitcast_ln60' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_17 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %bitcast_ln60, i32 52, i32 62)" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 305 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 306 [1/1] (0.00ns)   --->   "%trunc_ln60 = trunc i64 %bitcast_ln60 to i52" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 306 'trunc' 'trunc_ln60' <Predicate = true> <Delay = 0.00>
+ST_73 : Operation 307 [1/1] (1.81ns)   --->   "%icmp_ln60 = icmp ne i11 %tmp_17, -1" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 307 'icmp' 'icmp_ln60' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 308 [1/1] (2.77ns)   --->   "%icmp_ln60_1 = icmp eq i52 %trunc_ln60, 0" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 308 'icmp' 'icmp_ln60_1' <Predicate = true> <Delay = 2.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 309 [2/2] (5.51ns)   --->   "%tmp_18 = fcmp ogt double %tmp_s, 9.000000e-01" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 309 'dcmp' 'tmp_18' <Predicate = true> <Delay = 5.51> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 5.51> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 11> <Delay = 6.49>
+ST_74 : Operation 310 [1/1] (0.00ns) (grouped into LUT with out node and_ln60)   --->   "%or_ln60 = or i1 %icmp_ln60_1, %icmp_ln60" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 310 'or' 'or_ln60' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 311 [1/2] (5.51ns)   --->   "%tmp_18 = fcmp ogt double %tmp_s, 9.000000e-01" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 311 'dcmp' 'tmp_18' <Predicate = true> <Delay = 5.51> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 5.51> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 312 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln60 = and i1 %or_ln60, %tmp_18" [neural_net_HLS/solution1/kernel.cpp:60]   --->   Operation 312 'and' 'and_ln60' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 313 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_ovld.i1P(i1* %res, i1 %and_ln60) nounwind" [neural_net_HLS/solution1/kernel.cpp:61]   --->   Operation 313 'write' <Predicate = true> <Delay = 0.00>
+ST_74 : Operation 314 [1/1] (0.00ns)   --->   "ret void" [neural_net_HLS/solution1/kernel.cpp:64]   --->   Operation 314 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/kernel.cpp:26) [35]  (1.66 ns)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/kernel.cpp:26) [35]  (0 ns)
+	'getelementptr' operation ('b1_addr', neural_net_HLS/solution1/kernel.cpp:27) [44]  (0 ns)
+	'load' operation ('b1_load', neural_net_HLS/solution1/kernel.cpp:27) on array 'b1' [45]  (3.26 ns)
+
+ <State 4>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('b1_load', neural_net_HLS/solution1/kernel.cpp:27) on array 'b1' [45]  (3.26 ns)
+
+ <State 5>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('empty_21', neural_net_HLS/solution1/kernel.cpp:27) with incoming values : ('b1_load', neural_net_HLS/solution1/kernel.cpp:27) ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [51]  (0 ns)
+	'call' operation ('tmp', neural_net_HLS/solution1/kernel.cpp:31) to 'act_fun' [70]  (6.89 ns)
+
+ <State 6>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('vec0_load', neural_net_HLS/solution1/kernel.cpp:29) on array 'vec0' [61]  (3.26 ns)
+
+ <State 7>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', neural_net_HLS/solution1/kernel.cpp:29) [66]  (5.78 ns)
+
+ <State 8>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', neural_net_HLS/solution1/kernel.cpp:29) [66]  (5.78 ns)
+
+ <State 9>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', neural_net_HLS/solution1/kernel.cpp:29) [66]  (5.78 ns)
+
+ <State 10>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', neural_net_HLS/solution1/kernel.cpp:29) [66]  (5.78 ns)
+
+ <State 11>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [67]  (8.26 ns)
+
+ <State 12>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [67]  (8.26 ns)
+
+ <State 13>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [67]  (8.26 ns)
+
+ <State 14>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [67]  (8.26 ns)
+
+ <State 15>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_2', neural_net_HLS/solution1/kernel.cpp:29) [67]  (8.26 ns)
+
+ <State 16>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp', neural_net_HLS/solution1/kernel.cpp:31) to 'act_fun' [70]  (6.14 ns)
+	'store' operation ('store_ln31', neural_net_HLS/solution1/kernel.cpp:31) of variable 'tmp', neural_net_HLS/solution1/kernel.cpp:31 on array 'vec1', neural_net_HLS/solution1/kernel.cpp:22 [71]  (2.15 ns)
+
+ <State 17>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/kernel.cpp:34) [77]  (0 ns)
+	'getelementptr' operation ('b2_addr', neural_net_HLS/solution1/kernel.cpp:35) [86]  (0 ns)
+	'load' operation ('b2_load', neural_net_HLS/solution1/kernel.cpp:35) on array 'b2' [87]  (3.26 ns)
+
+ <State 18>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('b2_load', neural_net_HLS/solution1/kernel.cpp:35) on array 'b2' [87]  (3.26 ns)
+
+ <State 19>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('empty_25', neural_net_HLS/solution1/kernel.cpp:35) with incoming values : ('b2_load', neural_net_HLS/solution1/kernel.cpp:35) ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [93]  (0 ns)
+	'call' operation ('tmp_3', neural_net_HLS/solution1/kernel.cpp:39) to 'act_fun' [112]  (6.89 ns)
+
+ <State 20>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('w2_load', neural_net_HLS/solution1/kernel.cpp:37) on array 'w2' [107]  (3.26 ns)
+
+ <State 21>: 7.94ns
+The critical path consists of the following:
+	'load' operation ('vec1_load', neural_net_HLS/solution1/kernel.cpp:37) on array 'vec1', neural_net_HLS/solution1/kernel.cpp:22 [103]  (2.15 ns)
+	'fmul' operation ('tmp_4', neural_net_HLS/solution1/kernel.cpp:37) [108]  (5.78 ns)
+
+ <State 22>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_4', neural_net_HLS/solution1/kernel.cpp:37) [108]  (5.78 ns)
+
+ <State 23>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_4', neural_net_HLS/solution1/kernel.cpp:37) [108]  (5.78 ns)
+
+ <State 24>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_4', neural_net_HLS/solution1/kernel.cpp:37) [108]  (5.78 ns)
+
+ <State 25>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [109]  (8.26 ns)
+
+ <State 26>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [109]  (8.26 ns)
+
+ <State 27>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [109]  (8.26 ns)
+
+ <State 28>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [109]  (8.26 ns)
+
+ <State 29>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', neural_net_HLS/solution1/kernel.cpp:37) [109]  (8.26 ns)
+
+ <State 30>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_3', neural_net_HLS/solution1/kernel.cpp:39) to 'act_fun' [112]  (6.14 ns)
+	'store' operation ('store_ln39', neural_net_HLS/solution1/kernel.cpp:39) of variable 'tmp_3', neural_net_HLS/solution1/kernel.cpp:39 on array 'vec2', neural_net_HLS/solution1/kernel.cpp:22 [113]  (2.15 ns)
+
+ <State 31>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/kernel.cpp:41) [119]  (0 ns)
+	'getelementptr' operation ('b3_addr', neural_net_HLS/solution1/kernel.cpp:42) [128]  (0 ns)
+	'load' operation ('b3_load', neural_net_HLS/solution1/kernel.cpp:42) on array 'b3' [129]  (3.26 ns)
+
+ <State 32>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('b3_load', neural_net_HLS/solution1/kernel.cpp:42) on array 'b3' [129]  (3.26 ns)
+
+ <State 33>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('empty_29', neural_net_HLS/solution1/kernel.cpp:42) with incoming values : ('b3_load', neural_net_HLS/solution1/kernel.cpp:42) ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [135]  (0 ns)
+	'call' operation ('tmp_6', neural_net_HLS/solution1/kernel.cpp:46) to 'act_fun' [154]  (6.89 ns)
+
+ <State 34>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('w3_load', neural_net_HLS/solution1/kernel.cpp:44) on array 'w3' [149]  (3.26 ns)
+
+ <State 35>: 7.94ns
+The critical path consists of the following:
+	'load' operation ('vec2_load', neural_net_HLS/solution1/kernel.cpp:44) on array 'vec2', neural_net_HLS/solution1/kernel.cpp:22 [145]  (2.15 ns)
+	'fmul' operation ('tmp_7', neural_net_HLS/solution1/kernel.cpp:44) [150]  (5.78 ns)
+
+ <State 36>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', neural_net_HLS/solution1/kernel.cpp:44) [150]  (5.78 ns)
+
+ <State 37>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', neural_net_HLS/solution1/kernel.cpp:44) [150]  (5.78 ns)
+
+ <State 38>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', neural_net_HLS/solution1/kernel.cpp:44) [150]  (5.78 ns)
+
+ <State 39>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [151]  (8.26 ns)
+
+ <State 40>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [151]  (8.26 ns)
+
+ <State 41>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [151]  (8.26 ns)
+
+ <State 42>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [151]  (8.26 ns)
+
+ <State 43>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_8', neural_net_HLS/solution1/kernel.cpp:44) [151]  (8.26 ns)
+
+ <State 44>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_6', neural_net_HLS/solution1/kernel.cpp:46) to 'act_fun' [154]  (6.14 ns)
+	'store' operation ('store_ln46', neural_net_HLS/solution1/kernel.cpp:46) of variable 'tmp_6', neural_net_HLS/solution1/kernel.cpp:46 on array 'vec3', neural_net_HLS/solution1/kernel.cpp:22 [155]  (2.15 ns)
+
+ <State 45>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', neural_net_HLS/solution1/kernel.cpp:48) [161]  (0 ns)
+	'getelementptr' operation ('b4_addr', neural_net_HLS/solution1/kernel.cpp:49) [170]  (0 ns)
+	'load' operation ('b4_load', neural_net_HLS/solution1/kernel.cpp:49) on array 'b4' [171]  (3.26 ns)
+
+ <State 46>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('b4_load', neural_net_HLS/solution1/kernel.cpp:49) on array 'b4' [171]  (3.26 ns)
+
+ <State 47>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('empty_33', neural_net_HLS/solution1/kernel.cpp:49) with incoming values : ('b4_load', neural_net_HLS/solution1/kernel.cpp:49) ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [177]  (0 ns)
+	'call' operation ('tmp_11', neural_net_HLS/solution1/kernel.cpp:53) to 'act_fun' [195]  (6.89 ns)
+
+ <State 48>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('w4_load', neural_net_HLS/solution1/kernel.cpp:51) on array 'w4' [190]  (3.26 ns)
+
+ <State 49>: 7.94ns
+The critical path consists of the following:
+	'load' operation ('vec3_load', neural_net_HLS/solution1/kernel.cpp:51) on array 'vec3', neural_net_HLS/solution1/kernel.cpp:22 [186]  (2.15 ns)
+	'fmul' operation ('tmp_12', neural_net_HLS/solution1/kernel.cpp:51) [191]  (5.78 ns)
+
+ <State 50>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', neural_net_HLS/solution1/kernel.cpp:51) [191]  (5.78 ns)
+
+ <State 51>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', neural_net_HLS/solution1/kernel.cpp:51) [191]  (5.78 ns)
+
+ <State 52>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', neural_net_HLS/solution1/kernel.cpp:51) [191]  (5.78 ns)
+
+ <State 53>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [192]  (8.26 ns)
+
+ <State 54>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [192]  (8.26 ns)
+
+ <State 55>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [192]  (8.26 ns)
+
+ <State 56>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [192]  (8.26 ns)
+
+ <State 57>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_13', neural_net_HLS/solution1/kernel.cpp:51) [192]  (8.26 ns)
+
+ <State 58>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_11', neural_net_HLS/solution1/kernel.cpp:53) to 'act_fun' [195]  (6.14 ns)
+	'store' operation ('store_ln53', neural_net_HLS/solution1/kernel.cpp:53) of variable 'tmp_11', neural_net_HLS/solution1/kernel.cpp:53 on array 'vec4', neural_net_HLS/solution1/kernel.cpp:22 [196]  (2.15 ns)
+
+ <State 59>: 6.89ns
+The critical path consists of the following:
+	'phi' operation ('res_t') with incoming values : ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [202]  (0 ns)
+	'call' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:59) to 'act_fun' [219]  (6.89 ns)
+
+ <State 60>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('w5_load', neural_net_HLS/solution1/kernel.cpp:57) on array 'w5' [214]  (3.26 ns)
+
+ <State 61>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', neural_net_HLS/solution1/kernel.cpp:57) [215]  (5.78 ns)
+
+ <State 62>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', neural_net_HLS/solution1/kernel.cpp:57) [215]  (5.78 ns)
+
+ <State 63>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', neural_net_HLS/solution1/kernel.cpp:57) [215]  (5.78 ns)
+
+ <State 64>: 5.78ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', neural_net_HLS/solution1/kernel.cpp:57) [215]  (5.78 ns)
+
+ <State 65>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [216]  (8.26 ns)
+
+ <State 66>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [216]  (8.26 ns)
+
+ <State 67>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [216]  (8.26 ns)
+
+ <State 68>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [216]  (8.26 ns)
+
+ <State 69>: 8.26ns
+The critical path consists of the following:
+	'fadd' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:57) [216]  (8.26 ns)
+
+ <State 70>: 6.14ns
+The critical path consists of the following:
+	'call' operation ('res_t', neural_net_HLS/solution1/kernel.cpp:59) to 'act_fun' [219]  (6.14 ns)
+
+ <State 71>: 4.1ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_s', neural_net_HLS/solution1/kernel.cpp:60) [220]  (4.1 ns)
+
+ <State 72>: 4.1ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_s', neural_net_HLS/solution1/kernel.cpp:60) [220]  (4.1 ns)
+
+ <State 73>: 5.52ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_18', neural_net_HLS/solution1/kernel.cpp:60) [227]  (5.52 ns)
+
+ <State 74>: 6.49ns
+The critical path consists of the following:
+	'dcmp' operation ('tmp_18', neural_net_HLS/solution1/kernel.cpp:60) [227]  (5.52 ns)
+	'and' operation ('and_ln60', neural_net_HLS/solution1/kernel.cpp:60) [228]  (0.978 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

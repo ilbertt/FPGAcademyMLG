@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             neural_net_HLS
+Solution:            solution1
+Device target:       xc7a35t-cpg236-1
+Report date:         Mon May 04 11:23:21 CEST 2020
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:           4947
+FF:            5900
+DSP:             26
+BRAM:            12
+SRL:           1273
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    8.882
+Timing met

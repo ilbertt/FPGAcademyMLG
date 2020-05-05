@@ -1,7 +1,7 @@
 #ifndef MYLIB_H
 #define MYLIB_H
-#define X 1024
-#define N 1024
+#define X 2048
+#define N 512
 #define N1 16
 #define N2 8
 #define N3 4
